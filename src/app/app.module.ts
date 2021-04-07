@@ -8,6 +8,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmationService, MessageService } from 'primeng/api';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { CadastroLoginComponent } from './cadastro-login/cadastro-login.component';
 import { CadastroServicoComponent } from './cadastro-servico/cadastro-servico.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,10 @@ import { HttpClientModule } from '@angular/common/http';
     TableModule,
     FileUploadModule,
     HttpClientModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
   ],
   providers: [MessageService, Title, ConfirmationService],
   bootstrap: [AppComponent],
