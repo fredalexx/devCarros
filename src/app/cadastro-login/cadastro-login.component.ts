@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-cadastro-login',
@@ -11,6 +12,9 @@ import { MessageService } from 'primeng/api';
 export class CadastroLoginComponent implements OnInit {
   hide = true;
   operacao: boolean = true;
+
+  value1: string | undefined;
+  value2: string | undefined;
 
   constructor(
     private messageService: MessageService,

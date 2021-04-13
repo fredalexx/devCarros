@@ -9,6 +9,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from 'primeng/divider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -41,8 +43,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormsModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    PasswordModule,
+    DividerModule,
   ],
-  providers: [MessageService, Title, ConfirmationService],
+  providers: [MessageService, Title, ConfirmationService, AppComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
