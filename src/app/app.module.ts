@@ -18,6 +18,7 @@ import { CadastroServicoComponent } from './cadastro-servico/cadastro-servico.co
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
+import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     HomeComponent,
     CadastroLoginComponent,
     CadastroServicoComponent,
+    CadastroClienteComponent,
   ],
   imports: [
     BrowserAnimationsModule,
