@@ -12,6 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,13 +22,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 
+import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CadastroLoginComponent,
     CadastroServicoComponent,
+    CadastroVeiculoComponent
   ],
+  
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -47,6 +54,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     DividerModule,
   ],
   providers: [MessageService, Title, ConfirmationService, AppComponent],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}
