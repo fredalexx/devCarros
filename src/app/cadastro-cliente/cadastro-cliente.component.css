@@ -1,0 +1,13 @@
+backgroud-color:red
+mt-0 {
+  margin-top: 0 !important;
+}
+
+#logo {
+      width:50%;
+      height:50%;
+}
+
+.panel-heading{
+  font-size:150%;
+}

@@ -20,14 +20,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CadastroLoginComponent,
     CadastroServicoComponent,
-    CadastroVeiculoComponent,
+    CadastroVeiculoComponent
   ],
+  
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
