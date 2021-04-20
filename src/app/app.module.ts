@@ -12,7 +12,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,9 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 
+import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
-
-
 
 @NgModule({
   declarations: [
@@ -32,9 +30,10 @@ import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.co
     HomeComponent,
     CadastroLoginComponent,
     CadastroServicoComponent,
-    CadastroVeiculoComponent
+    CadastroVeiculoComponent,
+    CadastroClienteComponent,
   ],
-  
+
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
