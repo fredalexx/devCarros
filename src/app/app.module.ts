@@ -1,3 +1,4 @@
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 import { ClienteModule } from './cliente/cliente.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
@@ -53,6 +54,7 @@ import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.co
     PasswordModule,
     DividerModule,
     ClienteModule,
+    AutenticacaoModule,
   ],
   providers: [MessageService, Title, ConfirmationService, AppComponent],
 
