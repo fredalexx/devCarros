@@ -1,3 +1,4 @@
+import { ClienteModule } from './cliente/cliente.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { FileUploadModule } from 'primeng/fileupload';
@@ -9,6 +10,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from 'primeng/divider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +21,9 @@ import { CadastroServicoComponent } from './cadastro-servico/cadastro-servico.co
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
+
 import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
+import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +31,10 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
     HomeComponent,
     CadastroLoginComponent,
     CadastroServicoComponent,
+    CadastroVeiculoComponent,
     CadastroClienteComponent,
   ],
+
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -43,8 +50,12 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
     FormsModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    PasswordModule,
+    DividerModule,
+    ClienteModule,
   ],
-  providers: [MessageService, Title, ConfirmationService],
+  providers: [MessageService, Title, ConfirmationService, AppComponent],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}

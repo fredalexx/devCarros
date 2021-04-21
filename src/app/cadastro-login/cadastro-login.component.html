@@ -1,31 +1,25 @@
-<div>
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Amount</mat-label>
-      <input matInput type="email" class="example-right-align" />
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix>.00</span>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'" />
-      <button
-        mat-icon-button
-        matSuffix
-        (click)="hide = !hide"
-        [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="hide"
-      ></button>
-    </mat-form-field>
+<div class="p-d-flex p-jc-center" style="position: relative">
+  <div>
+    <h5>Usuário</h5>
+    <span class="p-float-label">
+      <input id="float-input" type="text" pInputText [(ngModel)]="value1" />
+      <label for="float-input">Digite o usuário</label>
+    </span>
+    <h5>Senha</h5>
+    <p-password [(ngModel)]="value2" [toggleMask]="true"></p-password>
+    <button
+      pButton
+      type="submit"
+      class="btn"
+      [class]="operacao ? 'btn-primary' : 'btn-success'"
+    >
+      {{ "Acessar" }}
+    </button>
+    <div class="p-mr-2">
+      <br /><br />
+      <a routerLink="/cliente">Cadastrar Cliente</a>
+      <br /><br />
+      <a routerLink="">Voltar para Home</a>
+    </div>
   </div>
-
-  <button
-    type="submit"
-    class="btn"
-    [class]="operacao ? 'btn-primary' : 'btn-success'"
-  >
-    {{ "Acessar" }}
-  </button>
-  <br /><br />
-  <a routerLink="/listar/cliente">Voltar para Home</a>
 </div>
