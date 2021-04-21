@@ -1,3 +1,4 @@
+import { ClienteModule } from './cliente/cliente.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { FileUploadModule } from 'primeng/fileupload';
@@ -51,6 +52,7 @@ import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.co
     ReactiveFormsModule,
     PasswordModule,
     DividerModule,
+    ClienteModule,
   ],
   providers: [MessageService, Title, ConfirmationService, AppComponent],
 
