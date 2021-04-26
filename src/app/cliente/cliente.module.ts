@@ -18,3 +18,20 @@ import { ButtonModule } from 'primeng/button';
   ],
 })
 export class ClienteModule {}
+export class Cliente {
+  constructor(
+      public id:number,
+      public Nome: string,
+      public Email : string,
+      public Telefone : number,
+
+      public Endereço: string
+
+      public Bairro: string
+      public Cidade: string
+      public Estado:string
+       {
+
+      }
+  ){}
+}

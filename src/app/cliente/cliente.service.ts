@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ClienteService {
-
-constructor() { }
-
+apiurl=htpp
+constructor(private http: HTTPClient) { }
+buscar(){
+  retur this.http.get(this.url);
+}
 }
