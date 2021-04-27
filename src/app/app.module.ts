@@ -1,3 +1,5 @@
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
+import { ClienteModule } from './cliente/cliente.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { FileUploadModule } from 'primeng/fileupload';
@@ -53,6 +55,8 @@ import { HomeModule } from './home/home.module';
     PasswordModule,
     DividerModule,
     HomeModule,
+    ClienteModule,
+    AutenticacaoModule,
   ],
   providers: [MessageService, Title, ConfirmationService, AppComponent],
 
