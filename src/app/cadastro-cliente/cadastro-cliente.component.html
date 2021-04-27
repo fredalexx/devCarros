@@ -1,0 +1,123 @@
+<head>
+    <title>Cadastro de Veiculos</title>
+    
+    
+  
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="titulo">Cadastro de Cliente</h1>
+    <br>
+    <p class="frase">Preencha os campos abaixo para realizar o cadastro do cliente.</p>
+    
+      <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-">
+              <div id="ui">
+                  <form class=" campo form-group">
+                    <h4>Dados do Cliente:</h4>
+                    <br>
+                      <label>nome do cliente:</label>
+                      <input type="text" name="cliente" id="cliente" class=" form-control" placeholder="Nome do cliente" required >
+                      <div class="row">
+                        <div class=" campo col-lg-6">
+                            <label>CPF</label>
+                            <input type="text" name="CPF" id="CPF" class= " form-control" placeholder="número do cpf" required>
+                        </div>
+                        <div class=" campo col-lg-6">
+                          <label>Cnh/RG:</label>
+                          <input type="text" name="documentos" id="documentos" class=" form-control" placeholder="número da cnh ou rg" required>
+                      </div>
+                      <div class=" campo col-lg-6">
+                        <label>Endereço:</label>
+                        <input type="text" name="endereço" id="endereço" class="form-control" placeholder="endereço completo" required>
+                    </div>
+                    <div class="campo col-lg-6">
+                      <label>Bairro</label>
+                      <input type="text" name="bairro" id="bairro" class="form-control" placeholder="bairro"required>
+                  </div>
+                  <div class="campo col-lg-6">
+                    <label>Cidade</label>
+                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="cidade"required>
+                </div>
+                <div class="campo col-lg-6">
+                    <label>Complemento</label>
+                    <input type="text" name="complemento" id="complemento" class="form-control" placeholder="Rua, av, bloco">
+                </div>
+                <div class="campo col-lg-6">
+                    <label>Cep</label>
+                    <input type="text" name="cep" id="cep" class="form-control" placeholder="cep"required>
+                
+                    <br>
+                    <select class="campo form-control">
+                        <option selected disabled   value="">Selecione</option>
+                        select name="estado" id="estado">
+                         
+               <option value="Am">Amazonas</option>
+               <option value="Ac">Acre</option>
+               <option value="Al">Alagoas</option>
+           <option value="Ap">Amapa</option>
+           <option value="Ba">Bahia</option>
+           <option value="Ce">Ceara</option>
+           <option value="Df">Distrito_Federal</option>	
+           <option value="Es">Espirito Santo</option>
+           <option value="Go">Goias</option>
+           <option value="Ma">Maranhão</option>
+           <option value="Mt">Mato Grosso</option>
+           <option value="Ms">Mato Grosso do Sul</option>
+           <option value="Mg">Minas Gerais</option>
+           <option value="Pa">Pará</option>
+           <option value="Pb">Paraíba</option>
+           <option value="Pr">Paraná</option>
+           <option value="Pe">Pernambuco</option>
+           <option value="Pi">Piauí</option>
+           <option value="Rj">Rio de Janeiro</option>
+           <option value="Rn">Rio Grande do Norte</option>
+           <option value="Rs">Rio Grande do Sul</option>
+           <option value="Ro">Rondônia</option>
+           <option value="Rr">Roraima</option>
+           <option value="Sc">Santa Catarina</option>
+           <option value="Sp">São Paulo</option>
+           <option value="Se">Sergipe</option>
+           <option value="To">Tocantins</option>
+                        </select>
+
+
+                    </div>
+
+                    <form>
+                
+            
+        
+                    <br>
+                                                            
+                     <h3> <label> Ja realizou alguns serviços em nossas oficinas ?</label></h3>
+                    
+                    <div class="campo form-check form-check-inline">
+                      <label class="form-check-label" for="resposta1">Sim</label>
+                      <input class="form-check-input" type="radio" name="resposta" id="resposta1" value="Sim">
+                      
+                    </div>
+                    <div class="campo form-check form-check-inline">
+                      <label class="form-check-label" for="resposta2">Não</label>
+                      <input class="form-check-input" type="radio" name="resposta" id="resposta2" value="Não">
+                      
+                    </div>
+                    <div class=" campo form-group">
+                      <label for="adicionais">Informaçoes adicionais:</label>
+                      <textarea class="form-control" id="adicionais" rows="3" placeholder="Informações adicionais para o cadastro"></textarea>
+                    </div>
+
+                    <input type="submit" name="Cadastrar" value="Cadastrar" class="botao1 btn btn-primary">
+                    <input type="reset" name="Cancelar" value="Cancelar" class="botao2 btn btn-primary">
+                  </form> 
+              
+          <div class="col-lg-3"></div>
+   
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
