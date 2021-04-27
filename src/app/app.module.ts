@@ -17,7 +17,6 @@ import { DividerModule } from 'primeng/divider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CadastroLoginComponent } from './cadastro-login/cadastro-login.component';
 import { CadastroServicoComponent } from './cadastro-servico/cadastro-servico.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -30,7 +29,6 @@ import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.co
   declarations: [
     AppComponent,
     HomeComponent,
-    CadastroLoginComponent,
     CadastroServicoComponent,
     CadastroVeiculoComponent,
     CadastroClienteComponent,
