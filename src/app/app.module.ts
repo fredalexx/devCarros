@@ -23,6 +23,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.co
     ReactiveFormsModule,
     PasswordModule,
     DividerModule,
+    HomeModule,
   ],
   providers: [MessageService, Title, ConfirmationService, AppComponent],
 
