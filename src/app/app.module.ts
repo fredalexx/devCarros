@@ -13,7 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CadastroLoginComponent } from './cadastro-login/cadastro-login.component';
+
 import { CadastroServicoComponent } from './cadastro-servico/cadastro-servico.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,11 +24,10 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
   declarations: [
     AppComponent,
     HomeComponent,
-    CadastroLoginComponent,
     CadastroServicoComponent,
     CadastroClienteComponent,
-
   ],
+
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -49,3 +48,4 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
