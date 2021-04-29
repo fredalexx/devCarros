@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
+import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,11 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
     FormsModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    PasswordModule,
+    DividerModule,
+    HomeModule,
+    ClienteModule,
+    AutenticacaoModule,
   ],
   providers: [MessageService, Title, ConfirmationService],
   bootstrap: [AppComponent],
