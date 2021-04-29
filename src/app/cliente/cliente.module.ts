@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClienteComponent } from './cliente.component';
 import { ButtonModule } from 'primeng/button';
-import { publicDecrypt } from 'crypto';
+//import { publicDecrypt } from 'crypto';
 
 @NgModule({
   imports: [CommonModule, ClienteRoutes, TableModule, ButtonModule],
@@ -21,14 +21,13 @@ import { publicDecrypt } from 'crypto';
 export class ClienteModule {}
 export class Cliente {
   constructor(
-      public id:number,
-      public Nome: string,
-      public Email : string,
-      public Telefone : number,
-      public Endereço: string
-      public Bairro: string
-      public Cidade: string
-      public Estado:string
-
-  ){}
+    public id: number,
+    public Nome: string,
+    public Email: string,
+    public Telefone: number,
+    public Endereço: string,
+    public Bairro: string,
+    public Cidade: string,
+    public Estado: string
+  ) {}
 }

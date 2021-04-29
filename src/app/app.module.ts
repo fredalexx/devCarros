@@ -12,7 +12,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
+import { ClienteModule } from './cliente/cliente.module';
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from 'primeng/divider';
 
 import { CadastroServicoComponent } from './cadastro-servico/cadastro-servico.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,9 +29,9 @@ import { HomeModule } from './home/home.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     CadastroServicoComponent,
     CadastroClienteComponent,
+    CadastroVeiculoComponent,
   ],
 
   imports: [
@@ -51,8 +55,7 @@ import { HomeModule } from './home/home.module';
     ClienteModule,
     AutenticacaoModule,
   ],
-  providers: [MessageService, Title, ConfirmationService],
+  providers: [MessageService, Title, ConfirmationService, AppComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
