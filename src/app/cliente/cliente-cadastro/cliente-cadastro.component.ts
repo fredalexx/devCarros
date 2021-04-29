@@ -9,7 +9,6 @@ export class ClienteCadastroComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
