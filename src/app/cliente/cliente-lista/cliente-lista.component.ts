@@ -15,15 +15,15 @@ export class ClienteListaComponent implements OnInit {
   ngOnInit() {}
 }
 
-import { CLIENTES } from './clientes-mock';
-import { Cliente } from './cliente.model';
-
+//import { CLIENTES } from './clientes-mock';
+//import { Cliente } from './cliente.model';
+/*
 @Component({
-    moduleId: module.id,
-    selector : 'clientes-lista',
-    templateUrl: 'clientes-lista.component.html'
+  moduleId: module.id,
+  selector: 'clientes-lista',
+  templateUrl: 'clientes-lista.component.html',
 })
 export class ClientesListaComponent {
-
-    clientes : Cliente[] = CLIENTES ;
+  //   clientes : Cliente[] = CLIENTES ;
 }
+*/
