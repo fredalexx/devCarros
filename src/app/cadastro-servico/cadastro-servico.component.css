@@ -1,0 +1,49 @@
+.titulo {
+  text-align: center;
+  color: white;
+}
+
+.frase {
+  text-align: center;
+  color: white;
+}
+.container #ui {
+  background-color: black;
+  padding: 100px;
+  margin-top: 30px;
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+.container #ui label {
+  color: white;
+}
+
+.container .form-group {
+  text-align: center;
+  color:white ;
+}
+.container input, select, textarea, button {
+  border-radius: 5px;
+}
+
+.campo input[type="text"], .campo input[type="date"], .campo input[type="search"], .campo select, .campo textarea {
+  padding: 0.5em;
+  border: 2px solid;
+  box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
+  background-color: darkgray;
+  color: black;
+  font-weight: bolder;
+  
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+  background: white;
+}
+
+.campo ::placeholder {
+  color:black;
+  font-weight: bolder;
+  text-align: center;
+}
+

@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'veiculo', component: CadastroVeiculoComponent },
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

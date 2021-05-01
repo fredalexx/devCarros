@@ -24,7 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
+import { ServicoModule } from './servico/servico.module';
 import { HomeModule } from './home/home.module';
+
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { HomeModule } from './home/home.module';
     HomeModule,
     ClienteModule,
     AutenticacaoModule,
+    ServicoModule
   ],
   providers: [MessageService, Title, ConfirmationService, AppComponent],
   bootstrap: [AppComponent],
