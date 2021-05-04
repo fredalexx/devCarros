@@ -1,123 +1,134 @@
-<head>
-    <title>Cadastro de Veiculos</title>
 
-
-
-</head>
-
-<body>
-
-  <div class="container">
-    <h1 class="titulo">Cadastro de Cliente</h1>
-    <br>
-    <p class="frase">Preencha os campos abaixo para realizar o cadastro do cliente.</p>
-
-      <div class="row">
-          <div class="col-lg-3"></div>
-          <div class="col-lg-">
-              <div id="ui">
-                  <form class=" campo form-group">
-                    <h4>Dados do Cliente:</h4>
-                    <br>
-                      <label>Nome do Cliente:</label>
-                      <input type="text" name="cliente" id="cliente" class=" form-control" placeholder="Nome do cliente" required >
-                      <div class="row">
-                        <div class=" campo col-lg-6">
-                            <label>CPF</label>
-                            <input type="text" name="CPF" id="CPF" class= " form-control" placeholder="número do cpf" required>
-                        </div>
-                        <div class=" campo col-lg-6">
-                          <label>Cnh/RG:</label>
-                          <input type="text" name="documentos" id="documentos" class=" form-control" placeholder="número da cnh ou rg" required>
-                      </div>
-                      <div class=" campo col-lg-6">
-                        <label>Endereço:</label>
-                        <input type="text" name="endereço" id="endereço" class="form-control" placeholder="endereço completo" required>
-                    </div>
-                    <div class="campo col-lg-6">
-                      <label>Bairro</label>
-                      <input type="text" name="bairro" id="bairro" class="form-control" placeholder="bairro"required>
+  <div class="d-flex flex-column wrapper">
+      <nav class="nnavbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3">
+          <div class="container">
+              <a class="navbar-brand" href="/">
+                  <strong>PitStop K2</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="navbar-collapse collapse">
+                  <ul class="navbar-nav flex-grow-1">
+                      <li class="nav-item">
+                          <a href="/index.html" class="nav-link text-white">Principal</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="/contato.html" class="nav-link text-white">Contato</a>
+                      </li>
+                  </ul>
+                  <div class="align-self-end">
+                      <ul class="navbar-nav">
+                          <li class="nav-item">
+                              <a href="/cadastro.html" class="nav-link text-white">Quero Me Cadastrar</a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="/login.html" class="nav-link text-white">Entrar</a>
+                          </li>
+                          <li class="nav-item">
+                              <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                                  title="5 produto(s) no carrinho"><small>5</small></span>
+                              <a href="/carrinho.html" class="nav-link text-white">
+                                  <svg class="bi" width="24" height="24" fill="currentColor">
+                                      <use xlink:href="/bi.svg#cart3" />
+                                  </svg>
+                              </a>
+                          </li>
+                      </ul>
                   </div>
-                  <div class="campo col-lg-6">
-                    <label>Cidade</label>
-                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="cidade"required>
-                </div>
-                <div class="campo col-lg-6">
-                    <label>Complemento</label>
-                    <input type="text" name="complemento" id="complemento" class="form-control" placeholder="Rua, av, bloco">
-                </div>
-                <div class="campo col-lg-6">
-                    <label>Cep</label>
-                    <input type="text" name="cep" id="cep" class="form-control" placeholder="cep"required>
-
-                    <br>
-                    <select class="campo form-control">
-                        <option selected disabled   value="">Selecione</option>
-                        select name="estado" id="estado">
-
-               <option value="Am">Amazonas</option>
-               <option value="Ac">Acre</option>
-               <option value="Al">Alagoas</option>
-           <option value="Ap">Amapa</option>
-           <option value="Ba">Bahia</option>
-           <option value="Ce">Ceara</option>
-           <option value="Df">Distrito_Federal</option>
-           <option value="Es">Espirito Santo</option>
-           <option value="Go">Goias</option>
-           <option value="Ma">Maranhão</option>
-           <option value="Mt">Mato Grosso</option>
-           <option value="Ms">Mato Grosso do Sul</option>
-           <option value="Mg">Minas Gerais</option>
-           <option value="Pa">Pará</option>
-           <option value="Pb">Paraíba</option>
-           <option value="Pr">Paraná</option>
-           <option value="Pe">Pernambuco</option>
-           <option value="Pi">Piauí</option>
-           <option value="Rj">Rio de Janeiro</option>
-           <option value="Rn">Rio Grande do Norte</option>
-           <option value="Rs">Rio Grande do Sul</option>
-           <option value="Ro">Rondônia</option>
-           <option value="Rr">Roraima</option>
-           <option value="Sc">Santa Catarina</option>
-           <option value="Sp">São Paulo</option>
-           <option value="Se">Sergipe</option>
-           <option value="To">Tocantins</option>
-                        </select>
+              </div>
+          </div>
+      </nav>
 
 
-                    </div>
-
-                    <form>
-
-
-
-                    <br>
-
-                     <h3> <label> Ja realizou alguns serviços em nossas oficinas ?</label></h3>
-
-                    <div class="campo form-check form-check-inline">
-                      <label class="form-check-label" for="resposta1">Sim</label>
-                      <input class="form-check-input" type="radio" name="resposta" id="resposta1" value="Sim">
-
-                    </div>
-                    <div class="campo form-check form-check-inline">
-                      <label class="form-check-label" for="resposta2">Não</label>
-                      <input class="form-check-input" type="radio" name="resposta" id="resposta2" value="Não">
-
-                    </div>
-                    <div class=" campo form-group">
-                      <label for="adicionais">Informaçoes adicionais:</label>
-                      <textarea class="form-control" id="adicionais" rows="3" placeholder="Informações adicionais para o cadastro"></textarea>
-                    </div>
-
-                    <input type="submit" name="Cadastrar" value="Cadastrar" class="botao1 btn btn-primary">
-                    <input type="reset" name="Cancelar" value="Cancelar" class="botao2 btn btn-primary">
-                  </form>
-
-          <div class="col-lg-3"></div>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+          <div class="container">
+              <h1>Informe seus dados, por favor</h1>
+              <hr>
+              <form class="mt-3">
+                  <div class="row">
+                      <div class="col-sm-12 col-md-6">
+                          <fieldset class="row gx-3">
+                              <legend>Dados Pessoais</legend>
+                              <div class="form-floating mb-3">
+                                  <input class="form-control" type="text" id="txtNome" placeholder=" " autofocus />
+                                  <label for="txtNome">Nome</label>
+                              </div>
+                              <div class="form-floating mb-3 col-md-6 col-xl-4">
+                                  <input class="form-control" type="text" id="txtCPF" placeholder=" " />
+                                  <label for="txtCPF">CPF</label>
+                              </div>
+                              <div class="form-floating mb-3 col-md-6 col-xl-4">
+                                  <input class="form-control" type="date" id="txtDataNascimento" placeholder=" " />
+                                  <label for="txtDataNascimento" class="d-inline d-sm-none d-md-inline d-lg-none">Data
+                                      Nascimento</label>
+                                  <label for="txtDataNascimento" class="d-none d-sm-inline d-md-none d-lg-inline">Data
+                                      de Nascimento</label>
+                              </div>
+                          </fieldset>
+                          <fieldset>
+                              <legend>Contatos</legend>
+                              <div class="form-floating mb-3 col-md-8">
+                                  <input class="form-control" type="email" id="txtEmail" placeholder=" " />
+                                  <label for="txtEmail">E-mail</label>
+                              </div>
+                              <div class="form-floating mb-3 col-md-6">
+                                  <input class="form-control" placeholder=" " type="text" id="txtTelefone" />
+                                  <label for="txtTelefone">Telefone</label>
+                              </div>
+                          </fieldset>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                          <fieldset class="row gx-3">
+                              <legend>Endereço</legend>
+                              <div class="form-floating mb-3 col-md-6 col-lg-4">
+                                  <input class="form-control" type="text" id="txtCEP" placeholder=" " />
+                                  <label for="txtCEP">CEP</label>
+                              </div>
+                              <div class="mb-3 col-md-6 col-lg-8 align-self-end">
+                                  <textarea class="form-control text-muted bg-light"
+                                      style="height: 58px; font-size: 14px;"
+                                      disabled>Digite o CEP para buscarmos o endereço.</textarea>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="form-floating mb-3 col-md-4">
+                                  <input class="form-control" type="text" id="txtNumero" placeholder=" " />
+                                  <label for="txtNumero">Número</label>
+                              </div>
+                              <div class="form-floating mb-3 col-md-8">
+                                  <input class="form-control" type="text" id="txtComplemento" placeholder=" " />
+                                  <label for="txtComplemento">Complemento</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                  <input class="form-control" type="text" id="txtReferencia" placeholder=" " />
+                                  <label for="txtReferencia">Referência</label>
+                              </div>
+                          </fieldset>
+                          <fieldset class="row gx-3">
+                              <legend>Senha de Acesso</legend>
+                              <div class="form-floating mb-3 col-lg-6">
+                                  <input class="form-control" type="password" id="txtSenha" placeholder=" " />
+                                  <label for="txtSenha">Senha</label>
+                              </div>
+                              <div class="form-floating mb-3 col-lg-6">
+                                  <input class="form-control" id="txtConfirmacaoSenha" placeholder=" " />
+                                  <label class="form-label" for="txtConfirmacaoSenha">Confirmação da Senha</label>
+                              </div>
+                          </fieldset>
+                      </div>
+                  </div>
+                  <hr />
+                  <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                          Desejo receber informações sobre promoções.
+                      </label>
+                  </div>
+                  <div class="mb-3 text-left">
+                      <a class="btn btn-lg btn-light btn-outline-danger" href="/">Cancelar</a>
+                      <input type="button" value="Criar meu cadastro" class="btn btn-lg btn-outline-primary"
+                          onclick="window.location.href='/confirmarcadastro.html'" />
+                  </div>
+              </form>
+          </div>
 
