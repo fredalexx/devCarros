@@ -26,16 +26,20 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
 import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
 import { ServicoModule } from './servico/servico.module';
 import { HomeModule } from './home/home.module';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     CadastroServicoComponent,
     CadastroClienteComponent,
     CadastroVeiculoComponent,
-  ],
+      FooterComponent,
+      HeaderComponent
+   ],
 
   imports: [
     BrowserAnimationsModule,
