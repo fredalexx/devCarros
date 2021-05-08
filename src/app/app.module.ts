@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { FileUploadModule } from 'primeng/fileupload';
@@ -22,12 +23,10 @@ import { CadastroServicoComponent } from './cadastro-servico/cadastro-servico.co
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
-import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.component';
 import { ServicoModule } from './servico/servico.module';
 import { HomeModule } from './home/home.module';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
+
 
 
 
@@ -35,12 +34,8 @@ import { HeaderComponent } from './header/header.component';
   declarations: [		
     AppComponent,
     CadastroServicoComponent,
-    CadastroClienteComponent,
-    CadastroVeiculoComponent,
-      FooterComponent,
-      HeaderComponent
+    CadastroVeiculoComponent
    ],
-
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -61,7 +56,8 @@ import { HeaderComponent } from './header/header.component';
     HomeModule,
     ClienteModule,
     AutenticacaoModule,
-    ServicoModule
+    ServicoModule, 
+    SharedModule
   ],
   providers: [MessageService, Title, ConfirmationService, AppComponent],
   bootstrap: [AppComponent],

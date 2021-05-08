@@ -7,6 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroVeiculoComponent implements OnInit {
 
+  cliente: any = {
+    id: "",
+    nome: "",
+    sobrenome: "",
+    email: "",
+    telefone: "",
+    cpf: "",
+    rg: "",
+    endereco: {
+      cep: "",
+      logradouro: "",
+      complemento: "",
+      numero: "",
+      bairro: "",
+      estado: {
+          id: "",
+          nome: "",
+          cidade: {
+              id: "",
+              nome: ""
+          }
+      }
+    },
+    dataNasc: ""
+  };  
+
+  estados: any[] = [];
+  estado: any;
+  cidades: any[] = [];
+  cidade: any; 
+  codigoCliente: any;
+  
+  operacao: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
