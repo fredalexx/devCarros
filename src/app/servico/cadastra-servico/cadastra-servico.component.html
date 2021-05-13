@@ -1,115 +1,91 @@
-<div class="container">
-  <h1 class="titulo">Cadastro de Serviços</h1>
-  <div class="row">
-    <div class="col-lg-3"></div>
-    <div class="col-lg-">
-      <div id="ui">
-        <form class="campo form-group">
-          <div class="row">
-            <div class="campo col-lg-8">
-              <label>Mecânica</label>
-              <input
-                type="text"
-                name="orcamentista"
-                id="orcamentista"
-                class="form-control"
-                placeholder="Oficina onde o serviço foi realizado"
-              />
-            </div>
-            <div class="campo col-lg-4">
-              <label>Nº da OS:</label>
-              <input
-                type="text"
-                name="os"
-                id="os"
-                class="form-control"
-                placeholder="Ex: OS Nº 5465"
-              />
-            </div>
-            <br />
-
-            <div class="campo col-lg-4">
-              <label>veiculo:</label>
-              <input
-                type="search"
-                name="veiculo"
-                id="veiculo"
-                class="form-control"
-                placeholder="Ex: Fiat Argo 2020"
-              />
-            </div>
-            <div class="campo col-lg-4">
-              <label>Data do serviço:</label>
-              <input
-                type="date"
-                name="abertura"
-                id="abertura"
-                class="form-control"
-              />
-            </div>
-            <div class="campo col-lg-4">
-              <label>Valor:</label>
-              <input
-                type="text"
-                name="preço"
-                id="preço"
-                class="form-control"
-                placeholder="Ex: 450,00 R$"
-              />
-            </div>
-          </div>
-          <br />
-          <input
-            type="submit"
-            name="Cadastrar"
-            value="Cadastrar"
-            class="botao1 btn btn-primary"
-          />
-          <input
-            type="reset"
-            name="Cancelar"
-            value="Cancelar"
-            class="botao2 btn btn-primary"
-          />
-        </form>
+<div class="container mt-5 mb-5 pt-5" style="position: relative">
+  <form>
+    <div class="form-row">
+      <input type="hidden" name="id" [(ngModel)]="cliente.id" />
+      <div class="form-group col-md-6">
+        <label for="nome">Ordem de Serviço</label>
+        <input
+          name="nome"
+          type="text"
+          class="form-control"
+          [(ngModel)]="cliente.nome"
+        />
       </div>
-      <br /><br />
-      <a routerLink="/home">Voltar para Home</a>
+      <div class="form-group col-md-6">
+        <label for="sobrenome">Mecânica</label>
+        <input
+          type="text"
+          class="form-control"
+          name="sobrenome"
+          [(ngModel)]="cliente.sobrenome"
+        />
+      </div>
     </div>
-    <div class="col-lg-3"></div>
-  </div>
-</div>
 
-<!-- <div class="m-1">
-  <p-table [rows]="4" [showCurrentPageReport]="true">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Marca</th>
-        <th>Modelo</th>
-        <th>Cor</th>
-        <th>Ano</th>
-        <th>Placa</th>
-        <th class="th-acoes">Ações</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-ag>
-      <tr>
-        <td>{{ ag.id }}</td>
-        <td>{{ ag.nome }}</td>
-        <td>{{ ag.telefone }}</td>
-        <td>
-          <p-button
-            icon="pi pi-pencil"
-            class="btn-editar"
-            [title]="'Editar contato ' + ag.nome"
-          >
-          </p-button>
-          <p-button
-            icon="pi pi-trash"
-            [title]="'Excluir contato ' + ag.nome"
-          ></p-button>
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
-</div> -->
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <label for="cpf">Serviço Realizado</label>
+        <input
+          type="text"
+          class="form-control"
+          name="cpf"
+          [(ngModel)]="cliente.cpf"
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="telefone">Valor</label>
+        <input
+          type="text"
+          class="form-control"
+          name="email"
+          [(ngModel)]="cliente.email"
+        />
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn"
+      [class]="operacao ? 'btn-primary' : 'btn-success'"
+    >
+      {{ operacao ? "Cadastrar" : "Atualizar" }}
+    </button>
+    <br /><br />
+    <div class="m-1">
+      <p-table [rows]="4" [showCurrentPageReport]="true">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Data</th>
+            <th>OS</th>
+            <th>Mecânica</th>
+            <th>Serviço</th>
+            <th>Valor</th>
+            <th class="th-acoes">Ações</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-ag>
+          <tr>
+            <td>{{ ag.id }}</td>
+            <td>{{ ag.nome }}</td>
+            <td>{{ ag.telefone }}</td>
+            <td>
+              <p-button
+                icon="pi pi-pencil"
+                class="btn-editar"
+                [title]="'Editar contato ' + ag.nome"
+              >
+              </p-button>
+              <p-button
+                icon="pi pi-trash"
+                [title]="'Excluir contato ' + ag.nome"
+              ></p-button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <br /><br />
+    <a routerLink="/veiculo">Voltar para Veiculo</a>
+    <br /><br />
+  </form>
+</div>
