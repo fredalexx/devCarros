@@ -3,20 +3,20 @@
     <div class="form-row">
       <input type="hidden" name="id" [(ngModel)]="cliente.id" />
       <div class="form-group col-md-6">
-        <label for="nome">Ordem de Serviço</label>
+        <label for="os">Ordem de Serviço</label>
         <input
-          name="nome"
+          name="os"
           type="text"
           class="form-control"
           [(ngModel)]="cliente.nome"
         />
       </div>
       <div class="form-group col-md-6">
-        <label for="sobrenome">Mecânica</label>
+        <label for="mecanica">Mecânica</label>
         <input
           type="text"
           class="form-control"
-          name="sobrenome"
+          name="mecanica"
           [(ngModel)]="cliente.sobrenome"
         />
       </div>
@@ -24,25 +24,33 @@
 
     <div class="form-row">
       <div class="form-group col-md-8">
-        <label for="cpf">Serviço Realizado</label>
+        <label for="realizado">Serviço Realizado</label>
         <input
           type="text"
           class="form-control"
-          name="cpf"
+          name="realizado"
           [(ngModel)]="cliente.cpf"
         />
       </div>
       <div class="form-group col-md-4">
-        <label for="telefone">Valor</label>
+        <label for="valor">Valor</label>
         <input
           type="text"
           class="form-control"
-          name="email"
+          name="valor"
           [(ngModel)]="cliente.email"
         />
       </div>
+      <button
+        pButton
+        pRipple
+        label="Item"
+        icon="pi pi-plus"
+        class="p-button-success p-mr-2"
+        (click)="openNew()"
+      ></button>
     </div>
-
+    <br />
     <button
       type="submit"
       class="btn"
@@ -89,3 +97,56 @@
     <br /><br />
   </form>
 </div>
+
+<!--Código da caixa para inserir outro item de serviço -->
+
+<p-dialog
+  [(visible)]="servicoDialog"
+  [style]="{ width: '450px' }"
+  header="Adicionar Serviço"
+  [modal]="true"
+  styleClass="p-fluid"
+>
+  <ng-template pTemplate="content">
+    <div class="p-formgrid p-grid">
+      <div class="p-field p-col-8">
+        <label for="quantity">Serviço</label>
+        <input
+          type="text"
+          pInputText
+          id="servico"
+          [(ngModel)]="cliente.servico"
+        />
+      </div>
+      <div class="p-field p-col-4">
+        <label for="valor">Valor</label>
+        <p-inputNumber
+          id="valor"
+          [(ngModel)]="cliente.valor"
+          mode="currency"
+          currency="BLR"
+          locale="pt-BR"
+        ></p-inputNumber>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <button
+      pButton
+      pRipple
+      label="Cancelar"
+      icon="pi pi-times"
+      class="p-button-text"
+      (click)="hideDialog()"
+    ></button>
+    <button
+      pButton
+      pRipple
+      label="Salvar"
+      icon="pi pi-check"
+      class="p-button-text"
+      (click)="openNew()"
+    ></button>
+  </ng-template>
+</p-dialog>

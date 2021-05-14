@@ -9,6 +9,10 @@ import { ServicoRoutes } from './servico.routing';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServicoComponent } from './servico.component';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { DialogModule } from 'primeng/dialog';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   imports: [
@@ -17,6 +21,10 @@ import { ServicoComponent } from './servico.component';
     FormsModule,
     TableModule,
     ButtonModule,
+    DialogModule,
+    ConfirmDialogModule,
+    InputNumberModule,
+    InputTextModule,
   ],
   declarations: [
     ServicoComponent,

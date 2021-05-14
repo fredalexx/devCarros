@@ -7,8 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastraServicoComponent implements OnInit {
   cliente: any = {};
+
   operacao: boolean = true;
+
+  servicoDialog: boolean = false;
+
   constructor() {}
 
   ngOnInit() {}
+
+  openNew() {
+    this.cliente = {};
+    this.servicoDialog = true;
+  }
+
+  hideDialog() {
+    this.servicoDialog = false;
+  }
 }
