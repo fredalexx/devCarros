@@ -1,53 +1,53 @@
 <div class="container mt-5 mb-5 pt-5" style="position: relative">
   <form>
     <div class="form-row">
-      <input type="hidden" name="id" [(ngModel)]="cliente.id" />
+      <input type="hidden" name="id" [(ngModel)]="veiculo.id" />
       <div class="form-group col-md-6">
-        <label for="nome">Marca</label>
+        <label for="marca">Marca</label>
         <input
-          name="nome"
+          name="marca"
           type="text"
           class="form-control"
-          [(ngModel)]="cliente.nome"
+          [(ngModel)]="veiculo.marca"
         />
       </div>
       <div class="form-group col-md-6">
-        <label for="sobrenome">Modelo</label>
+        <label for="modelo">Modelo</label>
         <input
           type="text"
           class="form-control"
-          name="sobrenome"
-          [(ngModel)]="cliente.sobrenome"
+          name="modelo"
+          [(ngModel)]="veiculo.modelo"
         />
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-4">
-        <label for="cpf">Cor</label>
+        <label for="cor">Cor</label>
         <input
           type="text"
           class="form-control"
-          name="cpf"
-          [(ngModel)]="cliente.cpf"
+          name="cor"
+          [(ngModel)]="veiculo.cor"
         />
       </div>
       <div class="form-group col-md-4">
-        <label for="rg">Ano</label>
+        <label for="ano">Ano</label>
         <input
           type="text"
           class="form-control"
-          name="rg"
-          [(ngModel)]="cliente.rg"
+          name="ano"
+          [(ngModel)]="veiculo.ano"
         />
       </div>
       <div class="form-group col-md-4">
-        <label for="telefone">Placa</label>
+        <label for="placa">Placa</label>
         <input
           type="text"
           class="form-control"
-          name="email"
-          [(ngModel)]="cliente.email"
+          name="placa"
+          [(ngModel)]="veiculo.placa"
         />
       </div>
     </div>
@@ -56,6 +56,7 @@
       type="submit"
       class="btn"
       [class]="operacao ? 'btn-primary' : 'btn-success'"
+      (click)="adicionar()"
     >
       {{ operacao ? "Cadastrar" : "Atualizar" }}
     </button>
@@ -73,21 +74,23 @@
             <th class="th-acoes">Ações</th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-ag>
+        <ng-template pTemplate="body" let-dado>
           <tr>
-            <td>{{ ag.id }}</td>
-            <td>{{ ag.nome }}</td>
-            <td>{{ ag.telefone }}</td>
+            <td>{{ dado.marca }}</td>
+            <td>{{ dado.modelo }}</td>
+            <td>{{ dado.cor }}</td>
+            <td>{{ dado.placa }}</td>
+            <td>{{ dado.ano }}</td>
             <td>
               <p-button
                 icon="pi pi-pencil"
                 class="btn-editar"
-                [title]="'Editar contato ' + ag.nome"
+                [title]="'Editar contato ' + dado.marca"
               >
               </p-button>
               <p-button
                 icon="pi pi-trash"
-                [title]="'Excluir contato ' + ag.nome"
+                [title]="'Excluir contato ' + dado.marca"
               ></p-button>
             </td>
           </tr>
