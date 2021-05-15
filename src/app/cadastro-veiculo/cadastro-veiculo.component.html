@@ -63,7 +63,7 @@
     <br /><br />
 
     <div class="m-1">
-      <p-table [rows]="4" [showCurrentPageReport]="true">
+      <p-table [rows]="4" [showCurrentPageReport]="true" [value]="veiculos">
         <ng-template pTemplate="header">
           <tr>
             <th>Marca</th>
@@ -82,6 +82,12 @@
             <td>{{ dado.placa }}</td>
             <td>{{ dado.ano }}</td>
             <td>
+              <p-button
+                icon="pi pi-plus"
+                class="p-button-success"
+                [routerLink]="'/servicos/cadastro'"
+              >
+              </p-button>
               <p-button
                 icon="pi pi-pencil"
                 class="btn-editar"

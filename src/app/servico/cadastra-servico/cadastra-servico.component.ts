@@ -1,3 +1,7 @@
+import { ServicoService } from './../servico.service';
+import { ServicoMapper } from './../mapper/servico-mapper';
+import { ServicoDTO } from './../dto/servico-dto';
+import { ServicoModel } from './../model/servico-model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,22 +10,44 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastra-servico.component.scss'],
 })
 export class CadastraServicoComponent implements OnInit {
-  cliente: any = {};
+  servicos: ServicoModel[] = [];
+  servico: ServicoDTO = {};
+  mapper = new ServicoMapper();
 
-  operacao: boolean = true;
+  operacao: Boolean = true;
 
   servicoDialog: boolean = false;
 
-  constructor() {}
+  constructor(private service: ServicoService ) {}
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    this.consultar();
+  }
+
+  consultar(){
+    this.service.buscar().subscribe((resposta)=>{
+      this.servicos = resposta;
+    })
+  }
+
+  adicionar() {
+    this.service.salvar(this.servico).subscribe((resposta) => {
+      console.log(resposta);
+      this.consultar();
+      this.servico = {};
+    });
+  }
 
   openNew() {
-    this.cliente = {};
+    this.servico = {};
     this.servicoDialog = true;
   }
 
   hideDialog() {
     this.servicoDialog = false;
+  }
+
+  adicionarItem(){
+
   }
 }
