@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { TableModule } from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 import { CadastraServicoComponent } from './cadastra-servico/cadastra-servico.component';
-import { ListaServicoComponent } from './lista-servico/lista-servico.component';
 import { ServicoRoutes } from './servico.routing';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -28,7 +27,6 @@ import { InputTextModule } from 'primeng/inputtext';
   ],
   declarations: [
     ServicoComponent,
-    ListaServicoComponent,
     CadastraServicoComponent,
   ],
 })

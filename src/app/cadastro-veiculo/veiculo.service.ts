@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class VeiculoService {
-  url: string = environment.URLSERVIDOR + 'veiculo';
+  url: string = environment.URLSERVIDOR + 'veiculos';
 
   constructor(private http: HttpClient) {}
 

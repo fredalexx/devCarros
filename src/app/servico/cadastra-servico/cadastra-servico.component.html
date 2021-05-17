@@ -1,14 +1,14 @@
 <div class="container mt-5 mb-5 pt-5" style="position: relative">
   <form>
     <div class="form-row">
-      <input type="hidden" name="id" [(ngModel)]="cliente.id" />
+      <input type="hidden" name="id" [(ngModel)]="servico.id" />
       <div class="form-group col-md-6">
         <label for="os">Ordem de Serviço</label>
         <input
           name="os"
           type="text"
           class="form-control"
-          [(ngModel)]="cliente.nome"
+          [(ngModel)]="servico.os"
         />
       </div>
       <div class="form-group col-md-6">
@@ -17,30 +17,12 @@
           type="text"
           class="form-control"
           name="mecanica"
-          [(ngModel)]="cliente.sobrenome"
+          [(ngModel)]="servico.mecanica"
         />
       </div>
     </div>
 
     <div class="form-row">
-      <div class="form-group col-md-8">
-        <label for="realizado">Serviço Realizado</label>
-        <input
-          type="text"
-          class="form-control"
-          name="realizado"
-          [(ngModel)]="cliente.cpf"
-        />
-      </div>
-      <div class="form-group col-md-4">
-        <label for="valor">Valor</label>
-        <input
-          type="text"
-          class="form-control"
-          name="valor"
-          [(ngModel)]="cliente.email"
-        />
-      </div>
       <button
         pButton
         pRipple
@@ -49,18 +31,48 @@
         class="p-button-success p-mr-2"
         (click)="openNew()"
       ></button>
+      <div class="m-1">
+        <p-table [rows]="4" [showCurrentPageReport]="true">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Serviço</th>
+              <th>Valor</th>
+              <th class="th-acoes">Ações</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-servico>
+            <tr>
+              <td>{{ servico.item }}</td>
+              <td>{{ servico.valor }}</td>
+              <td>
+                <p-button
+                  icon="pi pi-pencil"
+                  class="btn-editar"
+                  [title]="'Editar contato ' + servico.item"
+                >
+                </p-button>
+                <p-button
+                  icon="pi pi-trash"
+                  [title]="'Excluir contato ' + servico.item"
+                ></p-button>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
     </div>
     <br />
     <button
       type="submit"
       class="btn"
       [class]="operacao ? 'btn-primary' : 'btn-success'"
+      (click)="adicionar()"
     >
       {{ operacao ? "Cadastrar" : "Atualizar" }}
     </button>
     <br /><br />
     <div class="m-1">
-      <p-table [rows]="4" [showCurrentPageReport]="true">
+      <p-table [rows]="4" [showCurrentPageReport]="true" [value]="servicos">
         <ng-template pTemplate="header">
           <tr>
             <th>Data</th>
@@ -71,21 +83,23 @@
             <th class="th-acoes">Ações</th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-ag>
+        <ng-template pTemplate="body" let-servicos>
           <tr>
-            <td>{{ ag.id }}</td>
-            <td>{{ ag.nome }}</td>
-            <td>{{ ag.telefone }}</td>
+            <td>{{ servicos.data }}</td>
+            <td>{{ servicos.os }}</td>
+            <td>{{ servicos.mecanica }}</td>
+            <td>{{ servicos.item }}</td>
+            <td>{{ servicos.valor }}</td>
             <td>
               <p-button
                 icon="pi pi-pencil"
                 class="btn-editar"
-                [title]="'Editar contato ' + ag.nome"
+                [title]="'Editar contato ' + servicos.nome"
               >
               </p-button>
               <p-button
                 icon="pi pi-trash"
-                [title]="'Excluir contato ' + ag.nome"
+                [title]="'Excluir contato ' + servicos.nome"
               ></p-button>
             </td>
           </tr>
@@ -111,18 +125,13 @@
     <div class="p-formgrid p-grid">
       <div class="p-field p-col-8">
         <label for="quantity">Serviço</label>
-        <input
-          type="text"
-          pInputText
-          id="servico"
-          [(ngModel)]="cliente.servico"
-        />
+        <input type="text" pInputText id="servico" [(ngModel)]="servico.item" />
       </div>
       <div class="p-field p-col-4">
         <label for="valor">Valor</label>
         <p-inputNumber
           id="valor"
-          [(ngModel)]="cliente.valor"
+          [(ngModel)]="servico.valor"
           mode="currency"
           currency="BLR"
           locale="pt-BR"
@@ -146,7 +155,7 @@
       label="Salvar"
       icon="pi pi-check"
       class="p-button-text"
-      (click)="openNew()"
+      (click)="adicionarItem()"
     ></button>
   </ng-template>
 </p-dialog>
