@@ -1,5 +1,18 @@
 <title>DEVCARROS</title>
-<div class="d-flex flex-column wrapper">
+
+<mat-toolbar>
+  <mat-toolbar-row style="font-size: 1.2rem; height: 70px;">
+    <span><b>Gerenciador Automotivo</b></span>
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="beforeMenu"><b>ESCOLHA UMA FUNCINALIDADE</b> </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Cadastrar Veículo</button>
+      <button mat-menu-item>Cadastar Seviço</button>
+      <button mat-menu-item>Sair</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!--<div class="d-flex flex-column wrapper">
   <nav
     class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3"
   >
@@ -31,4 +44,4 @@
       </div>
     </div>
   </nav>
-</div>
+</div>-->

@@ -1,3 +1,4 @@
+import { PrincipalComponent } from './home/principal/principal.component';
 import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
@@ -28,14 +29,13 @@ import { ServicoModule } from './servico/servico.module';
 import { HomeModule } from './home/home.module';
 
 
-
-
 @NgModule({
-  declarations: [		
+  declarations: [
     AppComponent,
     CadastroServicoComponent,
-    CadastroVeiculoComponent
-   ],
+    CadastroVeiculoComponent,
+
+  ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -56,10 +56,11 @@ import { HomeModule } from './home/home.module';
     HomeModule,
     ClienteModule,
     AutenticacaoModule,
-    ServicoModule, 
-    SharedModule
+    ServicoModule,
+    SharedModule,
+
   ],
   providers: [MessageService, Title, ConfirmationService, AppComponent],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
