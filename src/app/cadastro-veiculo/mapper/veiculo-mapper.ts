@@ -10,7 +10,6 @@ export class VeiculoMapper {
       cor: dto.cor ? dto.cor : '',
       placa: dto.placa ? dto.placa : '',
       ano: dto.ano ? dto.ano : '',
-      dataCriacao: new Date(),
     };
   }
 

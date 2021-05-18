@@ -3,8 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
 
-  { path: "servicos/cadastro", component: CadastraServicoComponent}
-
+  { path: "servicos/:idVeiculo/cadastro", component: CadastraServicoComponent}
 ];
 
 export const ServicoRoutes = RouterModule.forChild(routes);

@@ -5,5 +5,4 @@ export interface VeiculoModel {
   cor: string;
   placa: string;
   ano?: string;
-  dataCriacao: Date;
 }

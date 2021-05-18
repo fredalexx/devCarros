@@ -1,8 +1,12 @@
+import { VeiculoDTO } from './../../cadastro-veiculo/dto/veiculo-dto';
+import { VeiculoService } from './../../cadastro-veiculo/veiculo.service';
 import { ServicoService } from './../servico.service';
 import { ServicoMapper } from './../mapper/servico-mapper';
 import { ServicoDTO } from './../dto/servico-dto';
 import { ServicoModel } from './../model/servico-model';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { VeiculoModel } from 'src/app/cadastro-veiculo/model/veiculo-model';
 
 @Component({
   selector: 'app-cadastra-servico',
@@ -12,16 +16,25 @@ import { Component, OnInit } from '@angular/core';
 export class CadastraServicoComponent implements OnInit {
   servicos: ServicoModel[] = [];
   servico: ServicoDTO = {};
+  veiculo: VeiculoDTO={};
   mapper = new ServicoMapper();
 
   operacao: Boolean = true;
 
   servicoDialog: boolean = false;
+  idVeiculo: number = 0;
 
-  constructor(private service: ServicoService ) {}
+
+
+  constructor(private service: ServicoService,
+    private route: ActivatedRoute, private veiculoService: VeiculoService ) {}
 
   ngOnInit(): void {
-    this.consultar();
+   // this.consultar();
+   this.idVeiculo = this.route.snapshot.params['idVeiculo'];
+   this.veiculoService.buscarPorId(this.idVeiculo)
+   .subscribe(res => this.veiculo = res);
+
   }
 
   consultar(){

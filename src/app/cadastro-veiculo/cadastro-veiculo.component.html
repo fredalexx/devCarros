@@ -85,7 +85,7 @@
               <p-button
                 icon="pi pi-plus"
                 class="p-button-success"
-                [routerLink]="'/servicos/cadastro'"
+                [routerLink]="'/servicos/' + dado.id + '/cadastro'"
               >
               </p-button>
               <p-button
@@ -105,7 +105,5 @@
     </div>
     <br /><br />
     <a routerLink="/home">Voltar para Home</a>
-    <br /><br />
-    <a routerLink="/servicos/cadastro">Serviços</a>
   </form>
 </div>
