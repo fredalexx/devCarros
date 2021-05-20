@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClienteComponent } from './cliente.component';
 import { ButtonModule } from 'primeng/button';
-//import { publicDecrypt } from 'crypto';
+
 
 @NgModule({
   imports: [CommonModule, ClienteRoutes, TableModule, ButtonModule],
@@ -18,7 +18,7 @@ import { ButtonModule } from 'primeng/button';
     ClienteListaComponent,
   ],
 })
-export class ClienteModule {}
+export class ClienteModule { }
 export class Cliente {
   constructor(
     public id: number,
@@ -29,5 +29,5 @@ export class Cliente {
     public Bairro: string,
     public Cidade: string,
     public Estado: string
-  ) {}
+  ) { }
 }

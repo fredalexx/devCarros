@@ -10,9 +10,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class VeiculoService {
-  url: string = environment.URLSERVIDOR + 'veiculos';
+  url: string = environment.URL_SERVIDOR + 'veiculos';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   buscar(): Observable<VeiculoModel[]> {
     return this.http

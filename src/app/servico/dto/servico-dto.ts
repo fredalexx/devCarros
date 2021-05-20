@@ -3,5 +3,5 @@ export interface ServicoDTO {
   os?: string;
   mecanica?: string;
   item?: string;
-  valor?: string;
+  valor?: number;
 }

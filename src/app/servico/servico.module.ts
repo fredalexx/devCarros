@@ -1,3 +1,4 @@
+
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +13,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DialogModule } from 'primeng/dialog';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -24,10 +26,12 @@ import { InputTextModule } from 'primeng/inputtext';
     ConfirmDialogModule,
     InputNumberModule,
     InputTextModule,
+    SharedModule
+
   ],
   declarations: [
     ServicoComponent,
     CadastraServicoComponent,
   ],
 })
-export class ServicoModule {}
+export class ServicoModule { }
