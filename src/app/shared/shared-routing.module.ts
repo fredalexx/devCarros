@@ -1,7 +1,10 @@
+import { CadastroVeiculoComponent } from './../cadastro-veiculo/cadastro-veiculo.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'cadastrar', component: CadastroVeiculoComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

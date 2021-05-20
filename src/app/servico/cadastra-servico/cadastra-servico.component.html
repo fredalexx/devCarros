@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="container mt-5 mb-5 pt-5" style="position: relative">
   <h1>{{veiculo.marca}}</h1>
   <form>
@@ -5,33 +6,17 @@
       <input type="hidden" name="id" [(ngModel)]="servico.id" />
       <div class="form-group col-md-6">
         <label for="os">Ordem de Serviço</label>
-        <input
-          name="os"
-          type="text"
-          class="form-control"
-          [(ngModel)]="servico.os"
-        />
+        <input name="os" type="text" class="form-control" [(ngModel)]="servico.os" />
       </div>
       <div class="form-group col-md-6">
         <label for="mecanica">Mecânica</label>
-        <input
-          type="text"
-          class="form-control"
-          name="mecanica"
-          [(ngModel)]="servico.mecanica"
-        />
+        <input type="text" class="form-control" name="mecanica" [(ngModel)]="servico.mecanica" />
       </div>
     </div>
 
     <div class="form-row">
-      <button
-        pButton
-        pRipple
-        label="Item"
-        icon="pi pi-plus"
-        class="p-button-success p-mr-2"
-        (click)="openNew()"
-      ></button>
+      <button pButton pRipple label="Item" icon="pi pi-plus" class="p-button-success p-mr-2"
+        (click)="openNew()"></button>
       <div class="m-1">
         <p-table [rows]="4" [showCurrentPageReport]="true">
           <ng-template pTemplate="header">
@@ -46,16 +31,9 @@
               <td>{{ servico.item }}</td>
               <td>{{ servico.valor }}</td>
               <td>
-                <p-button
-                  icon="pi pi-pencil"
-                  class="btn-editar"
-                  [title]="'Editar contato ' + servico.item"
-                >
+                <p-button icon="pi pi-pencil" class="btn-editar" [title]="'Editar contato ' + servico.item">
                 </p-button>
-                <p-button
-                  icon="pi pi-trash"
-                  [title]="'Excluir contato ' + servico.item"
-                ></p-button>
+                <p-button icon="pi pi-trash" [title]="'Excluir contato ' + servico.item"></p-button>
               </td>
             </tr>
           </ng-template>
@@ -63,12 +41,7 @@
       </div>
     </div>
     <br />
-    <button
-      type="submit"
-      class="btn"
-      [class]="operacao ? 'btn-primary' : 'btn-success'"
-      (click)="adicionar()"
-    >
+    <button type="submit" class="btn" [class]="operacao ? 'btn-primary' : 'btn-success'" (click)="adicionar()">
       {{ operacao ? "Cadastrar" : "Atualizar" }}
     </button>
     <br /><br />
@@ -92,16 +65,9 @@
             <td>{{ servicos.item }}</td>
             <td>{{ servicos.valor }}</td>
             <td>
-              <p-button
-                icon="pi pi-pencil"
-                class="btn-editar"
-                [title]="'Editar contato ' + servicos.nome"
-              >
+              <p-button icon="pi pi-pencil" class="btn-editar" [title]="'Editar contato ' + servicos.nome">
               </p-button>
-              <p-button
-                icon="pi pi-trash"
-                [title]="'Excluir contato ' + servicos.nome"
-              ></p-button>
+              <p-button icon="pi pi-trash" [title]="'Excluir contato ' + servicos.nome"></p-button>
             </td>
           </tr>
         </ng-template>
@@ -115,13 +81,8 @@
 
 <!--Código da caixa para inserir outro item de serviço -->
 
-<p-dialog
-  [(visible)]="servicoDialog"
-  [style]="{ width: '450px' }"
-  header="Adicionar Serviço"
-  [modal]="true"
-  styleClass="p-fluid"
->
+<p-dialog [(visible)]="servicoDialog" [style]="{ width: '450px' }" header="Adicionar Serviço" [modal]="true"
+  styleClass="p-fluid">
   <ng-template pTemplate="content">
     <div class="p-formgrid p-grid">
       <div class="p-field p-col-8">
@@ -130,33 +91,14 @@
       </div>
       <div class="p-field p-col-4">
         <label for="valor">Valor</label>
-        <p-inputNumber
-          id="valor"
-          [(ngModel)]="servico.valor"
-          mode="currency"
-          currency="BLR"
-          locale="pt-BR"
-        ></p-inputNumber>
+        <p-inputNumber id="valor" [(ngModel)]="servico.valor" mode="currency" currency="BLR" locale="pt-BR">
+        </p-inputNumber>
       </div>
     </div>
   </ng-template>
 
   <ng-template pTemplate="footer">
-    <button
-      pButton
-      pRipple
-      label="Cancelar"
-      icon="pi pi-times"
-      class="p-button-text"
-      (click)="hideDialog()"
-    ></button>
-    <button
-      pButton
-      pRipple
-      label="Salvar"
-      icon="pi pi-check"
-      class="p-button-text"
-      (click)="adicionarItem()"
-    ></button>
+    <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+    <button pButton pRipple label="Salvar" icon="pi pi-check" class="p-button-text" (click)="adicionarItem()"></button>
   </ng-template>
 </p-dialog>

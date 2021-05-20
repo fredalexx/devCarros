@@ -7,7 +7,7 @@ export class ServicoMapper {
       os: dto.os ? dto.os : '',
       mecanica: dto.mecanica ? dto.mecanica : '',
       item: dto.item ? dto.item : '',
-      valor: dto.valor ? dto.valor : '',
+      valor: dto.valor ? dto.valor : 0,
       dataCriacao: new Date(),
     };
   }

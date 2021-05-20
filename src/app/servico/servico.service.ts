@@ -10,9 +10,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ServicoService {
-  url: string = environment.URLSERVIDOR + 'servicos';
+  url: string = environment.URL_SERVIDOR + 'servicos';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   buscar(): Observable<ServicoModel[]> {
     return this.http
