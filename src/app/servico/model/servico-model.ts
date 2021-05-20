@@ -3,6 +3,6 @@ export interface ServicoModel {
   os: string;
   mecanica: string;
   item: string;
-  valor: string;
+  valor: number;
   dataCriacao: Date;
 }

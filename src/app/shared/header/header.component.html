@@ -1,10 +1,30 @@
 <title>DEVCARROS</title>
-<div class="d-flex flex-column wrapper">
+
+<mat-toolbar>
+  <mat-toolbar-row style="font-size: 1.2rem; height: 70px;">
+    <span><b>Gerenciador Automotivo</b></span>
+    <span class="example-spacer" routerLink=""></span>
+    <button mat-button [matMenuTriggerFor]="beforeMenu"><b>ESCOLHA UMA FUNCINALIDADE</b> </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item routerLink="/veiculo">Cadastrar Veículo</button>
+      <button mat-menu-item routerLink="/">Cadastar Seviço</button>
+      <button mat-menu-item routerLink=" ">Sair</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!--<div class="d-flex flex-column wrapper">
   <nav
     class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3"
   >
     <div class="container">
-      <a class="navbar-brand" routerLink="/"><b>Gerenciador Automotivo</b></a>
+      <a class="navbar-brand" const routes: Routes = [
+  { path: 'clientes', component: ClienteListaComponent },
+  { path: 'clientes/cadastro', component: ClienteCadastroComponent },
+  { path: 'clientes/detalhe', component: ClienteDetalheComponent },
+];
+
+export const ClienteRoutes = RouterModule.forChild(routes);
+><b>Gerenciador Automotivo</b></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -31,4 +51,4 @@
       </div>
     </div>
   </nav>
-</div>
+</div>-->

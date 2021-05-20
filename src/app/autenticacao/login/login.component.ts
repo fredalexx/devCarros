@@ -1,18 +1,39 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { take } from 'rxjs/operators';
+
+import { AutenticacaoService } from '../autenticacao.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  hide = true;
-  operacao: boolean = true;
+  form = this.formBuilder.group({
+    email: ['', Validators.required],
+    senha: ['', Validators.required],
+  });
 
-  value1: string | undefined;
-  value2: string | undefined;
+  constructor(
+    private readonly formBuilder: FormBuilder,
+    private readonly router: Router,
+    private readonly autenticacaoService: AutenticacaoService
+  ) { }
 
-  constructor() {}
+  ngOnInit(): void { }
 
-  ngOnInit() {}
+  login(): void {
+    if (this.form.invalid) {
+      return;
+    } else {
+      this.autenticacaoService
+        .login(this.form.value)
+        .pipe(take(1))
+        .subscribe((response) => {
+          this.router.navigate(['/home']);
+        });
+    }
+  }
 }

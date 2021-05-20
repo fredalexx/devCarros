@@ -5,15 +5,86 @@
   </ng-template>
 </p-carousel>
 
+<mat-tab-group mat-align-tabs="center" style="padding-top: 10px; padding-left: 2%; padding-right: 2%;">
+  <mat-tab label="Troca de óleo">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" style="padding:2%;" style="margin: 1%;">
+      <div>
+        <mat-card class="mat-card-instrucao" class="mat-card-live" fxFlex="0 1 calc(33.3% - 11px)"
+          fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+          <mat-card-title class="mat-card-title-instrucao">
+
+          </mat-card-title>
+          <mat-card-content>
+            <p> <b>
+                Esse conjunto de itens sofre maior desgaste por ser acionado com
+                frequência, isso acontece geralmente quando se tem uma grande
+                rodagem, principalmente em perímetro urbano, onde o trânsito é mais
+                lento e exige mais do sistema de embreagem. A troca da embreagem em
+                casos de desgaste é importante para garantir o funcionamento correto
+                do câmbio e para que o condutor trafegue sem problemas.</b>
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Revisão dos componentes de Freio">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" style="padding:2%;">
+      <div>
+        <mat-card class="mat-card-instrucao" class="mat-card-live" fxFlex="0 1 calc(33.3% - 11px)"
+          fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+          <mat-card-title>
+          </mat-card-title>
+          <mat-card-content>
+            <p><b>
+                São inúmeros os componentes que compõem o sistema de frenagem do
+                veículo como exemplo pastilhas, discos de freio, tambor entre
+                outros. Regularmente tendem a ser feitas revisões nestes itens pois
+                são de uso constante e consequentemente sofrem desgaste, como são de
+                extrema importância para a segurança é inevitável o serviço de
+                revisão e manutenção.</b>
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Serviço básico">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" style="padding:2%;">
+      <div>
+        <mat-card class="mat-card-instrucao" class="mat-card-live" fxFlex="0 1 calc(33.3% - 11px)"
+          fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+          <mat-card-title>
+          </mat-card-title>
+          <mat-card-content>
+            <p><b>
+                São inúmeros os componentes que compõem o sistema de frenagem do
+                veículo como exemplo pastilhas, discos de freio, tambor entre
+                outros. Regularmente tendem a ser feitas revisões nestes itens pois
+                são de uso constante e consequentemente sofrem desgaste, como são de
+                extrema importância para a segurança é inevitável o serviço de
+                revisão e manutenção.</b>
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+<!--
 <div class="container">
-  <div class="row g-3">
+  <div class="row wrap g-3">
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4">
       <div class="card text-center bg-light">
         <a href="#" class="position-absolute end-0 p-2 text-danger">
-          <i
-            class="bi-suit-heart"
-            style="font-size: 24px; line-height: 24px"
-          ></i>
+          <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px"></i>
         </a>
         <div class="card-header">Troca de oleo</div>
         <div class="card-body">
@@ -35,10 +106,7 @@
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4">
       <div class="card text-center bg-light">
         <a href="#" class="position-absolute end-0 p-2 text-danger">
-          <i
-            class="bi-suit-heart"
-            style="font-size: 24px; line-height: 24px"
-          ></i>
+          <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px"></i>
         </a>
         <div class="card-header">Revisão dos componentes de Freio</div>
         <div class="card-body">
@@ -60,10 +128,7 @@
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4">
       <div class="card text-center bg-light">
         <a href="#" class="position-absolute end-0 p-2 text-danger">
-          <i
-            class="bi-suit-heart"
-            style="font-size: 24px; line-height: 24px"
-          ></i>
+          <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px"></i>
         </a>
         <div class="card-header">Troca de óleo do motor</div>
         <div class="card-body">
@@ -85,10 +150,7 @@
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4">
       <div class="card text-center bg-light">
         <a href="#" class="position-absolute end-0 p-2 text-danger">
-          <i
-            class="bi-suit-heart"
-            style="font-size: 24px; line-height: 24px"
-          ></i>
+          <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px"></i>
         </a>
         <div class="card-header">Troca de filtros</div>
         <div class="card-body">
@@ -107,10 +169,7 @@
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4">
       <div class="card text-center bg-light">
         <a href="#" class="position-absolute end-0 p-2 text-danger">
-          <i
-            class="bi-suit-heart"
-            style="font-size: 24px; line-height: 24px"
-          ></i>
+          <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px"></i>
         </a>
         <div class="card-header">Troca de lâmpadass</div>
         <div class="card-body">
@@ -132,10 +191,7 @@
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-4">
       <div class="card text-center bg-light">
         <a href="#" class="position-absolute end-0 p-2 text-danger">
-          <i
-            class="bi-suit-heart"
-            style="font-size: 24px; line-height: 24px"
-          ></i>
+          <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px"></i>
         </a>
         <div class="card-header">Alinhamento e Balanceamento</div>
         <div class="card-body">
@@ -158,4 +214,4 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
