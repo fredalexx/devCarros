@@ -28,14 +28,13 @@ import { CadastroVeiculoComponent } from './cadastro-veiculo/cadastro-veiculo.co
 import { ServicoModule } from './servico/servico.module';
 import { HomeModule } from './home/home.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     CadastroServicoComponent,
     CadastroVeiculoComponent,
-
   ],
+  exports: [CadastroVeiculoComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -58,9 +57,8 @@ import { HomeModule } from './home/home.module';
     AutenticacaoModule,
     ServicoModule,
     SharedModule,
-
   ],
   providers: [MessageService, Title, ConfirmationService, AppComponent],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
