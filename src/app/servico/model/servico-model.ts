@@ -5,4 +5,5 @@ export interface ServicoModel {
   item: string;
   valor: number;
   dataCriacao: Date;
+  idVeiculo: number;
 }

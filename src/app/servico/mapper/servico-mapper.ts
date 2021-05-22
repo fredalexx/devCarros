@@ -9,6 +9,7 @@ export class ServicoMapper {
       item: dto.item ? dto.item : '',
       valor: dto.valor ? dto.valor : 0,
       dataCriacao: new Date(),
+      idVeiculo: dto.idVeiculo ? dto.idVeiculo : 0
     };
   }
 
@@ -19,6 +20,7 @@ export class ServicoMapper {
       mecanica: model.mecanica,
       item: model.item,
       valor: model.valor,
+      idVeiculo: model.idVeiculo
     };
   }
 }

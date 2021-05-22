@@ -5,4 +5,5 @@ export interface VeiculoModel {
   cor: string;
   placa: string;
   ano?: string;
+  servicoList: [];
 }

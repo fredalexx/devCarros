@@ -1,3 +1,4 @@
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { VeiculoService } from './veiculo.service';
 import { VeiculoMapper } from './mapper/veiculo-mapper';
 import { VeiculoDTO } from './dto/veiculo-dto';
@@ -13,12 +14,17 @@ export class CadastroVeiculoComponent implements OnInit {
   veiculos: VeiculoModel[] = [];
   veiculo: VeiculoDTO = {};
   mapper = new VeiculoMapper();
+  loading: boolean = true;
 
   operacao: Boolean = true;
 
-  constructor(private service: VeiculoService) { }
+  constructor(
+    private service: VeiculoService,
+    private confirmarService: ConfirmationService,
+    private messageService: MessageService) { }
 
   ngOnInit(): void {
+    this.loading = true;
     this.consultar();
   }
 
@@ -46,6 +52,23 @@ export class CadastroVeiculoComponent implements OnInit {
       this.veiculo = {};
       this.operacao = true;
       this.consultar();
+    });
+  }
+
+  excluir(dado: VeiculoDTO) {
+    this.confirmarService.confirm({
+      message: 'Tem certeza que deseja excluir este cliente?',
+      accept: () => {
+        this.service.excluir(dado).subscribe(resposta => {
+          this.messageService.add(
+            {
+              key: 'toast',
+              severity: 'success',
+              summary: 'CLIENTE',
+              detail: 'excluído com sucesso!'
+            });
+        });
+      }
     });
   }
 }

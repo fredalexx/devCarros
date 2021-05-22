@@ -5,4 +5,5 @@ export interface VeiculoDTO {
   cor?: string;
   modelo?: string;
   ano?: string;
+  servicoList?: [];
 }

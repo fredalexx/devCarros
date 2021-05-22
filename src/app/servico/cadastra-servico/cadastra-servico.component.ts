@@ -30,20 +30,20 @@ export class CadastraServicoComponent implements OnInit {
     private route: ActivatedRoute, private veiculoService: VeiculoService) { }
 
   ngOnInit(): void {
-    // this.consultar();
     this.idVeiculo = this.route.snapshot.params['idVeiculo'];
-    this.veiculoService.buscarPorId(this.idVeiculo)
-      .subscribe(res => this.veiculos = res);
-
+    this.consultar();
   }
 
   consultar() {
-    this.service.buscar().subscribe((resposta) => {
-      this.servicos = resposta;
-    })
+    this.veiculoService.buscarPorId(this.idVeiculo)
+      .subscribe(res => {
+        this.veiculos = res;
+        this.servicos = res.servicoList
+      });
   }
 
   adicionar() {
+    this.servico.idVeiculo = this.idVeiculo;
     this.service.salvar(this.servico).subscribe((resposta) => {
       console.log(resposta);
       this.consultar();
@@ -52,15 +52,11 @@ export class CadastraServicoComponent implements OnInit {
   }
 
   openNew() {
-    this.servico = {};
+
     this.servicoDialog = true;
   }
 
   hideDialog() {
     this.servicoDialog = false;
-  }
-
-  adicionarItem() {
-
   }
 }
