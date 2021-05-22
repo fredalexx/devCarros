@@ -2,8 +2,7 @@ import { CadastraServicoComponent } from './cadastra-servico/cadastra-servico.co
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'servicos/:idVeiculo/servico', component: CadastraServicoComponent },
-  { path: 'servicos/cadastro', component: CadastraServicoComponent },
+  { path: 'servicos/:idVeiculo/servico', component: CadastraServicoComponent }
 ];
 
 export const ServicoRoutes = RouterModule.forChild(routes);

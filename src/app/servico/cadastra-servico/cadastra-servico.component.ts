@@ -6,7 +6,7 @@ import { ServicoDTO } from './../dto/servico-dto';
 import { ServicoModel } from './../model/servico-model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { VeiculoModel } from 'src/app/cadastro-veiculo/model/veiculo-model';
+
 
 @Component({
   selector: 'app-cadastra-servico',
