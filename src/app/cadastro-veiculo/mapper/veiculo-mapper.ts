@@ -10,6 +10,7 @@ export class VeiculoMapper {
       cor: dto.cor ? dto.cor : '',
       placa: dto.placa ? dto.placa : '',
       ano: dto.ano ? dto.ano : '',
+      servicoList: dto.servicoList ? dto.servicoList : []
     };
   }
 
@@ -21,6 +22,7 @@ export class VeiculoMapper {
       cor: model.cor,
       placa: model.placa,
       ano: model.ano,
+      servicoList: model.servicoList
     };
   }
 }

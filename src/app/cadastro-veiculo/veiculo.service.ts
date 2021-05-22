@@ -62,4 +62,15 @@ export class VeiculoService {
       })
       .pipe(map((resposta) => <VeiculoModel>resposta));
   }
+
+  excluir(veiculo: VeiculoDTO) {
+    let token = localStorage.getItem('token');
+    token = token ? token : '';
+    return this.http.delete(this.url + '/' + veiculo.id, {
+      headers: new HttpHeaders({
+        'Authorization': token
+      })
+    })
+      .pipe(map((resposta) => <VeiculoModel>resposta));
+  }
 }

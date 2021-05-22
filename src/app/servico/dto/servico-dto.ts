@@ -4,4 +4,5 @@ export interface ServicoDTO {
   mecanica?: string;
   item?: string;
   valor?: number;
+  idVeiculo?: number;
 }

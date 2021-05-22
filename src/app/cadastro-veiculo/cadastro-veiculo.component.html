@@ -46,18 +46,18 @@
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-dado>
-          <tr>
+          <tr td class="deletar-atualizar">
             <td>{{ dado.marca }}</td>
             <td>{{ dado.modelo }}</td>
             <td>{{ dado.cor }}</td>
             <td>{{ dado.placa }}</td>
             <td>{{ dado.ano }}</td>
             <td>
-              <p-button icon="pi pi-plus" class="p-button-success" [routerLink]="'/servicos/' + dado.id + '/servico'">
+              <p-button icon="pi pi-plus" class="espaco" [routerLink]="'/servicos/' + dado.id + '/servico'">
               </p-button>
-              <p-button icon="pi pi-pencil" class="btn-editar" [title]="'Editar contato ' + dado.marca">
+              <p-button icon="pi pi-pencil" class="espaco" [routerLink]="'Editar contato ' + dado.marca">
               </p-button>
-              <p-button icon="pi pi-trash" [title]="'Excluir contato ' + dado.marca"></p-button>
+              <p-button icon="pi pi-trash" (click)="excluir(dado.id)" class="espaco"></p-button>
             </td>
           </tr>
         </ng-template>

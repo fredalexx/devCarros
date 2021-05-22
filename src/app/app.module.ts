@@ -20,7 +20,6 @@ import { ClienteModule } from './cliente/cliente.module';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 
-import { CadastroServicoComponent } from './cadastro-servico/cadastro-servico.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -31,8 +30,7 @@ import { HomeModule } from './home/home.module';
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroServicoComponent,
-    CadastroVeiculoComponent,
+    CadastroVeiculoComponent
   ],
   exports: [CadastroVeiculoComponent],
   imports: [
@@ -61,4 +59,4 @@ import { HomeModule } from './home/home.module';
   providers: [MessageService, Title, ConfirmationService, AppComponent],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
