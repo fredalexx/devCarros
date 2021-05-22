@@ -16,7 +16,7 @@ export class CadastroVeiculoComponent implements OnInit {
 
   operacao: Boolean = true;
 
-  constructor(private service: VeiculoService) {}
+  constructor(private service: VeiculoService) { }
 
   ngOnInit(): void {
     this.consultar();
@@ -31,7 +31,6 @@ export class CadastroVeiculoComponent implements OnInit {
 
   adicionar() {
     this.service.salvar(this.veiculo).subscribe((resposta) => {
-      console.log(resposta);
       this.consultar();
       this.veiculo = {};
     });

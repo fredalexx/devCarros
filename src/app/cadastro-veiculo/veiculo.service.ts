@@ -30,7 +30,7 @@ export class VeiculoService {
     let token = localStorage.getItem('token');
     token = token ? token : '';
     return this.http
-      .get(this.url + `${environment.URL_SERVIDOR}/veiculo` + id,
+      .get(this.url + '/' + id,
         {
           headers: new HttpHeaders({
             'Authorization': token
@@ -55,7 +55,7 @@ export class VeiculoService {
     let token = localStorage.getItem('token');
     token = token ? token : '';
     return this.http
-      .put(this.url + `${environment.URL_SERVIDOR}/veiculo` + veiculo.id, veiculo, {
+      .put(this.url + '/' + veiculo.id, veiculo, {
         headers: new HttpHeaders({
           'Authorization': token
         })
