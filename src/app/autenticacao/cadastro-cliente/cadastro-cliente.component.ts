@@ -1,3 +1,4 @@
+import { FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroClienteComponent implements OnInit {
 
-  constructor() { }
+  form = this.formBuilder.group({
+    email: [],
+    senha: [],
+  });
+
+  constructor(
+    private readonly formBuilder: FormBuilder
+  ) { }
 
   ngOnInit(): void {
   }
