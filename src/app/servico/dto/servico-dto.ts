@@ -1,3 +1,5 @@
+import { Data } from "@angular/router";
+
 export interface ServicoDTO {
   id?: number;
   os?: string;
@@ -5,4 +7,5 @@ export interface ServicoDTO {
   item?: string;
   valor?: number;
   idVeiculo?: number;
+  dataCriacao?: Date;
 }

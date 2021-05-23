@@ -81,22 +81,25 @@
 
 <!--Código da caixa para inserir outro item de serviço -->
 
-<p-dialog [(visible)]="servicoDialog" [style]="{ width: '450px' }" header="Adicionar Serviço" [modal]="true"
+<p-dialog [(visible)]="servicoDialog" [style]="{ width: '520px' }" header="Adicionar Serviço" [modal]="true"
   styleClass="p-fluid">
   <ng-template pTemplate="content">
     <div class="p-formgrid p-grid">
-      <div class="p-field p-col-8">
+      <div class="form-group col-md-4">
         <label for="quantity">Serviço</label>
         <input type="text" pInputText id="servico" [(ngModel)]="servico.item" />
       </div>
-      <div class="p-field p-col-4">
+      <div class="form-group col-md-4">
         <label for="valor">Valor</label>
         <p-inputNumber id="valor" [(ngModel)]="servico.valor" mode="currency" currency="BLR" locale="pt-BR">
         </p-inputNumber>
       </div>
+      <div class="form-group col-md-4">
+        <label for="data_nasc">Data Serviço</label>
+        <input type="date" class="form-control" name="dataServico" [(ngModel)]="servico.dataCriacao" />
+      </div>
     </div>
   </ng-template>
-
   <ng-template pTemplate="footer">
     <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
     <button pButton pRipple label="Salvar" icon="pi pi-check" class="p-button-text" (click)="adicionar()"></button>

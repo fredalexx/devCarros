@@ -47,7 +47,15 @@ export class CadastraServicoComponent implements OnInit {
     this.service.salvar(this.servico).subscribe((resposta) => {
       console.log(resposta);
       this.consultar();
-      this.servico = {};
+    });
+  }
+
+  salvarItem() {
+    this.servico.item = this.servico.item;
+    this.service.salvar(this.servico).subscribe((resposta) => {
+      console.log(resposta);
+      this.consultar();
+      this.servico.dataCriacao = this.servico.dataCriacao;
     });
   }
 
