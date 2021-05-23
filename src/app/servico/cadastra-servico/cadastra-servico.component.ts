@@ -24,8 +24,6 @@ export class CadastraServicoComponent implements OnInit {
   servicoDialog: boolean = false;
   idVeiculo: number = 0;
 
-
-
   constructor(private service: ServicoService,
     private route: ActivatedRoute, private veiculoService: VeiculoService) { }
 

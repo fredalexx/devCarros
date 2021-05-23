@@ -1,6 +1,7 @@
 <app-header></app-header>
 <div class="container mt-5 mb-5 pt-5" style="position: relative">
   <h1>{{ veiculos.marca }} {{ veiculos.modelo }} {{ veiculos.placa }}</h1>
+  <br /><br />
   <form>
     <div class="form-row">
       <input type="hidden" name="id" [(ngModel)]="servico.id" />
@@ -16,10 +17,11 @@
 
     <div class="form-row">
       <button pButton pRipple label="Item" icon="pi pi-plus" class="p-button-success p-mr-2"
-        (click)="openNew()"></button>
+        (click)="openNew()"></button><br>
       <div class="m-1">
-        <p-table [rows]="4" [showCurrentPageReport]="true">
+        <p-table [rows]="4" [showCurrentPageReport]="true" [value]="servicos">
           <ng-template pTemplate="header">
+            <br />
             <tr>
               <th>Serviço</th>
               <th>Valor</th>
@@ -31,7 +33,7 @@
               <td>{{ servico.item }}</td>
               <td>{{ servico.valor }}</td>
               <td>
-                <p-button icon="pi pi-pencil" class="btn-editar" [title]="'Editar contato ' + servico.item">
+                <p-button icon="pi pi-pencil" class="espaco" [title]="'Editar contato ' + servico.item">
                 </p-button>
                 <p-button icon="pi pi-trash" [title]="'Excluir contato ' + servico.item"></p-button>
               </td>
@@ -45,6 +47,7 @@
       {{ operacao ? "Cadastrar" : "Atualizar" }}
     </button>
     <br /><br />
+
     <div class="m-1">
       <p-table [rows]="4" [showCurrentPageReport]="true" [value]="servicos">
         <ng-template pTemplate="header">
@@ -58,7 +61,7 @@
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-servicos>
-          <tr>
+          <tr td class="deletar-atualizar">
             <td>{{ servicos.data }}</td>
             <td>{{ servicos.os }}</td>
             <td>{{ servicos.mecanica }}</td>
