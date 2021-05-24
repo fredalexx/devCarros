@@ -1,4 +1,8 @@
-import { FormBuilder } from '@angular/forms';
+import { ClienteMapper } from './mapper/cliente-mapper';
+import { ClienteDTO } from './dto/ClienteDTO';
+import { ClienteModel } from './model/ClienteModel';
+import { ClienteService } from './cliente.service';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,16 +12,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroClienteComponent implements OnInit {
 
+  clientes: ClienteModel[] = [];
+  cliente: ClienteDTO = {};
+  mapper = new ClienteMapper();
+
   form = this.formBuilder.group({
-    email: [],
-    senha: [],
+    email: [''],
+    senha: [''],
+    nome: ['']
   });
 
   constructor(
-    private readonly formBuilder: FormBuilder
+    private readonly formBuilder: FormBuilder,
+    private service: ClienteService
   ) { }
 
+
   ngOnInit(): void {
+    //this.consultar();
   }
 
+  adicionar() {
+    console.log(this.form.value);
+    this.service.salvar(this.cliente).subscribe(resposta => {
+      console.log(resposta);
+      this.cliente = {};
+    });
+  }
 }
