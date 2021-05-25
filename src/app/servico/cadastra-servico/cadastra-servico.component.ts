@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-cadastra-servico',
   templateUrl: './cadastra-servico.component.html',
-  styleUrls: ['./cadastra-servico.component.scss'],
+  styleUrls: ['./cadastra-servico.component.css'],
 })
 export class CadastraServicoComponent implements OnInit {
   servicos: ServicoModel[] = [];
