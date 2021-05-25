@@ -33,9 +33,10 @@
               <td>{{ servico.item }}</td>
               <td>{{ servico.valor }}</td>
               <td>
-                <p-button icon="pi pi-pencil" class="espaco" [title]="'Editar contato ' + servico.item">
+                <p-button icon="pi pi-pencil" class="espaco" [title]="'Editar contato ' + servico.item" class="espaco">
                 </p-button>
-                <p-button icon="pi pi-trash" [title]="'Excluir contato ' + servico.item"></p-button>
+                <p-button icon="pi pi-trash" class="espaco" [title]="'Excluir contato ' + servico.item" class="espaco">
+                </p-button>
               </td>
             </tr>
           </ng-template>
@@ -62,15 +63,16 @@
         </ng-template>
         <ng-template pTemplate="body" let-servicos>
           <tr td class="deletar-atualizar">
-            <td>{{ servicos.data }}</td>
+            <td>{{ servicos.dataCriacao }}</td>
             <td>{{ servicos.os }}</td>
             <td>{{ servicos.mecanica }}</td>
             <td>{{ servicos.item }}</td>
             <td>{{ servicos.valor }}</td>
             <td>
-              <p-button icon="pi pi-pencil" class="btn-editar" [title]="'Editar contato ' + servicos.nome">
+              <p-button icon="pi pi-pencil" class="espaco" class="btn-editar"
+                [title]="'Editar contato ' + servicos.nome">
               </p-button>
-              <p-button icon="pi pi-trash" [title]="'Excluir contato ' + servicos.nome"></p-button>
+              <p-button icon="pi pi-trash" [title]="'Excluir contato ' + servicos.nome" class="espaco"></p-button>
             </td>
           </tr>
         </ng-template>
@@ -104,7 +106,9 @@
     </div>
   </ng-template>
   <ng-template pTemplate="footer">
-    <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
-    <button pButton pRipple label="Salvar" icon="pi pi-check" class="p-button-text" (click)="adicionar()"></button>
+    <button pButton pRipple label="Cancelar" icon="pi pi-times" class="espaco" class="p-button-text"
+      (click)="hideDialog()"></button>
+    <button pButton pRipple label="Salvar" icon="pi pi-check" class="espaco" class="p-button-text"
+      (click)="adicionar()"></button>
   </ng-template>
 </p-dialog>

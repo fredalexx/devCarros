@@ -44,6 +44,7 @@ export class CadastraServicoComponent implements OnInit {
     this.servico.idVeiculo = this.idVeiculo;
     this.service.salvar(this.servico).subscribe((resposta) => {
       console.log(resposta);
+      this.hideDialog();
       this.consultar();
     });
   }

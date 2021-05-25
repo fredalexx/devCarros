@@ -27,13 +27,10 @@ export class CadastroClienteComponent implements OnInit {
     private service: ClienteService
   ) { }
 
-
   ngOnInit(): void {
-    //this.consultar();
   }
 
   adicionar() {
-    console.log(this.form.value);
     this.service.salvar(this.cliente).subscribe(resposta => {
       console.log(resposta);
       this.cliente = {};
