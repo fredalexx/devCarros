@@ -1,3 +1,4 @@
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { VeiculoDTO } from './../../cadastro-veiculo/dto/veiculo-dto';
 import { VeiculoService } from './../../cadastro-veiculo/veiculo.service';
 import { ServicoService } from './../servico.service';
@@ -6,7 +7,6 @@ import { ServicoDTO } from './../dto/servico-dto';
 import { ServicoModel } from './../model/servico-model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
 
 @Component({
   selector: 'app-cadastra-servico',
@@ -20,16 +20,30 @@ export class CadastraServicoComponent implements OnInit {
   mapper = new ServicoMapper();
 
   operacao: Boolean = true;
+  loading: boolean = true;
 
   servicoDialog: boolean = false;
   idVeiculo: number = 0;
 
   constructor(private service: ServicoService,
-    private route: ActivatedRoute, private veiculoService: VeiculoService) { }
+    private route: ActivatedRoute,
+    private veiculoService: VeiculoService,
+    private confirmarService: ConfirmationService,
+    private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.idVeiculo = this.route.snapshot.params['idVeiculo'];
+    this.loading = true;
     this.consultar();
+  }
+
+  excluir() {
+    this.servico.idVeiculo = this.idVeiculo;
+    this.service.excluir(this.servico).subscribe((resposta) => {
+      console.log(resposta);
+      this.hideDialog();
+      this.consultar();
+    });
   }
 
   consultar() {
@@ -37,6 +51,7 @@ export class CadastraServicoComponent implements OnInit {
       .subscribe(res => {
         this.veiculos = res;
         this.servicos = res.servicoList
+        console.log(res)
       });
   }
 

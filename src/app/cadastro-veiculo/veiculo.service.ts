@@ -63,10 +63,10 @@ export class VeiculoService {
       .pipe(map((resposta) => <VeiculoModel>resposta));
   }
 
-  excluir(veiculo: VeiculoDTO) {
+  excluir(veiculo: number) {
     let token = localStorage.getItem('token');
     token = token ? token : '';
-    return this.http.delete(this.url + '/' + veiculo.id, {
+    return this.http.delete(this.url + '/' + veiculo, {
       headers: new HttpHeaders({
         'Authorization': token
       })
