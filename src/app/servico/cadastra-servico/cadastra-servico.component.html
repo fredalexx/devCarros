@@ -63,22 +63,23 @@
         </ng-template>
         <ng-template pTemplate="body" let-servicos>
           <tr td class="deletar-atualizar">
-            <td>{{ servicos.dataCriacao }}</td>
+            <td>{{ servicos.dataCriacao | date: 'dd/MM/yyyy'}}</td>
             <td>{{ servicos.os }}</td>
             <td>{{ servicos.mecanica }}</td>
             <td>{{ servicos.item }}</td>
             <td>{{ servicos.valor }}</td>
             <td>
-              <p-button icon="pi pi-pencil" class="btn-editar" [title]="'Editar contato ' + servicos.nome">
+              <p-button icon="pi pi-pencil" class="btn-editar" [title]="'Editar contato ' + servicos.id">
               </p-button>
-              <p-button icon="pi pi-trash" [title]="'Excluir contato ' + servicos.nome" class="espaco"></p-button>
+              <p-button icon="pi pi-trash" [title]="'Excluir contato ' + servicos.id" class="espaco"
+                (click)="excluir()"></p-button>
             </td>
           </tr>
         </ng-template>
       </p-table>
     </div>
     <br /><br />
-    <p-button routerLink="/veiculo">Voltar para Veiculo</p-button>
+    <p-button type="button" routerLink="/veiculo">Voltar para Veiculo</p-button>
     <br /><br />
   </form>
 </div>

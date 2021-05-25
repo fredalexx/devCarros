@@ -1,7 +1,8 @@
+import { MessageService, ConfirmationService } from 'primeng/api';
 
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { TableModule } from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 import { CadastraServicoComponent } from './cadastra-servico/cadastra-servico.component';
@@ -26,12 +27,17 @@ import { SharedModule } from '../shared/shared.module';
     ConfirmDialogModule,
     InputNumberModule,
     InputTextModule,
-    SharedModule
-
+    SharedModule,
   ],
   declarations: [
     ServicoComponent,
     CadastraServicoComponent,
+  ],
+
+  providers: [
+    MessageService,
+    Title,
+    ConfirmationService
   ],
 })
 export class ServicoModule { }

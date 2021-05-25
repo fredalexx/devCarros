@@ -38,6 +38,18 @@ export class ServicoService {
       .pipe(map((resposta) => <ServicoModel>resposta));
   }
 
+  excluir(servico: ServicoDTO): Observable<ServicoModel> {
+    let token = localStorage.getItem('token');
+    token = token ? token : '';
+    return this.http
+      .delete(this.url, {
+        headers: new HttpHeaders({
+          'Authorization': token
+        })
+      })
+      .pipe(map((resposta) => <ServicoModel>resposta));
+  }
+
   atualizar(servico: ServicoDTO) {
     let token = localStorage.getItem('token');
     token = token ? token : '';

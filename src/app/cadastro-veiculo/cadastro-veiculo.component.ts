@@ -55,20 +55,11 @@ export class CadastroVeiculoComponent implements OnInit {
     });
   }
 
-  excluir(dado: VeiculoDTO) {
-    this.confirmarService.confirm({
-      message: 'Tem certeza que deseja excluir este cliente?',
-      accept: () => {
-        this.service.excluir(dado).subscribe(resposta => {
-          this.messageService.add(
-            {
-              key: 'toast',
-              severity: 'success',
-              summary: 'CLIENTE',
-              detail: 'excluído com sucesso!'
-            });
-        });
-      }
+  excluir(dado: VeiculoModel) {
+    alert("funci")
+    this.service.excluir(dado.id).subscribe((resposta) => {
+      this.consultar();
+      this.veiculo = {};
     });
   }
 }

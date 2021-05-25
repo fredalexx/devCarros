@@ -55,7 +55,7 @@
             <td>
               <p-button icon="pi pi-plus" class="espaco" [routerLink]="'/servicos/' + dado.id + '/servico'">
               </p-button>
-              <p-button icon="pi pi-pencil" class="espaco" [routerLink]="'Editar contato ' + dado.marca">
+              <p-button icon="pi pi-pencil" class="espaco" (click)="atualizar()">
               </p-button>
               <p-button icon="pi pi-trash" (click)="excluir(dado.id)" class="espaco"></p-button>
             </td>

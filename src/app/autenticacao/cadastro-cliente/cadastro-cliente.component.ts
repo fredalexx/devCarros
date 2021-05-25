@@ -17,9 +17,9 @@ export class CadastroClienteComponent implements OnInit {
   mapper = new ClienteMapper();
 
   form = this.formBuilder.group({
-    email: [''],
-    senha: [''],
-    nome: ['']
+    email: ['', Validators.required],
+    senha: ['', Validators.required],
+    nome: ['', Validators.required]
   });
 
   constructor(
