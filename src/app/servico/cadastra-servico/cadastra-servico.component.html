@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="container mt-5 mb-5 pt-5" style="position: relative">
-  <h1>{{ veiculos.marca }} {{ veiculos.modelo }} {{ veiculos.placa }}</h1>
+  <h1>É esse veículo? {{ veiculos.marca }} {{ veiculos.modelo }} {{ veiculos.placa }}</h1>
   <br /><br />
   <form>
     <div class="form-row">
@@ -69,8 +69,7 @@
             <td>{{ servicos.item }}</td>
             <td>{{ servicos.valor }}</td>
             <td>
-              <p-button icon="pi pi-pencil" class="espaco" class="btn-editar"
-                [title]="'Editar contato ' + servicos.nome">
+              <p-button icon="pi pi-pencil" class="btn-editar" [title]="'Editar contato ' + servicos.nome">
               </p-button>
               <p-button icon="pi pi-trash" [title]="'Excluir contato ' + servicos.nome" class="espaco"></p-button>
             </td>
@@ -79,7 +78,7 @@
       </p-table>
     </div>
     <br /><br />
-    <a routerLink="/veiculo">Voltar para Veiculo</a>
+    <p-button routerLink="/veiculo">Voltar para Veiculo</p-button>
     <br /><br />
   </form>
 </div>
