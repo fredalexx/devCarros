@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
 export class VeiculoService {
   url: string = `${environment.URL_SERVIDOR}/veiculo`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   buscar(): Observable<VeiculoModel[]> {
     let token = localStorage.getItem('token');
@@ -20,8 +20,8 @@ export class VeiculoService {
     return this.http
       .get(this.url, {
         headers: new HttpHeaders({
-          'Authorization': token
-        })
+          Authorization: token,
+        }),
       })
       .pipe(map((resposta) => <VeiculoModel[]>resposta));
   }
@@ -30,12 +30,11 @@ export class VeiculoService {
     let token = localStorage.getItem('token');
     token = token ? token : '';
     return this.http
-      .get(this.url + '/' + id,
-        {
-          headers: new HttpHeaders({
-            'Authorization': token
-          })
-        })
+      .get(this.url + '/' + id, {
+        headers: new HttpHeaders({
+          Authorization: token,
+        }),
+      })
       .pipe(map((resposta) => <VeiculoModel>resposta));
   }
 
@@ -45,8 +44,8 @@ export class VeiculoService {
     return this.http
       .post(this.url, veiculo, {
         headers: new HttpHeaders({
-          'Authorization': token
-        })
+          Authorization: token,
+        }),
       })
       .pipe(map((resposta) => <VeiculoModel>resposta));
   }
@@ -57,20 +56,21 @@ export class VeiculoService {
     return this.http
       .put(this.url + '/' + veiculo.id, veiculo, {
         headers: new HttpHeaders({
-          'Authorization': token
-        })
+          Authorization: token,
+        }),
       })
       .pipe(map((resposta) => <VeiculoModel>resposta));
   }
 
-  excluir(veiculo: number) {
+  excluir(id: number): Observable<VeiculoModel> {
     let token = localStorage.getItem('token');
     token = token ? token : '';
-    return this.http.delete(this.url + '/' + veiculo, {
-      headers: new HttpHeaders({
-        'Authorization': token
+    return this.http
+      .delete(this.url + '/' + id, {
+        headers: new HttpHeaders({
+          Authorization: token,
+        }),
       })
-    })
       .pipe(map((resposta) => <VeiculoModel>resposta));
   }
 }
