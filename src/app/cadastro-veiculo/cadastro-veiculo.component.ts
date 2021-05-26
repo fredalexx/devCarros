@@ -55,9 +55,9 @@ export class CadastroVeiculoComponent implements OnInit {
     });
   }
 
-  excluir(dado: VeiculoModel) {
+  excluir(id: VeiculoDTO) {
     alert("funci")
-    this.service.excluir(dado.id).subscribe((resposta) => {
+    this.service.excluir(id).subscribe((resposta) => {
       this.consultar();
       this.veiculo = {};
     });

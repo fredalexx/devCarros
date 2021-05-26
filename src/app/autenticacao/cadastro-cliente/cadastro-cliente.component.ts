@@ -29,8 +29,8 @@ export class CadastroClienteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  adicionar() {
+  salvar() {
+    console.log(this.form.value);
     this.service.salvar(this.cliente).subscribe(resposta => {
       console.log(resposta);
       this.cliente = {};

@@ -63,12 +63,12 @@ export class VeiculoService {
       .pipe(map((resposta) => <VeiculoModel>resposta));
   }
 
-  excluir(veiculo: number) {
+  excluir(id: VeiculoDTO): Observable<VeiculoModel> {
     let token = localStorage.getItem('token');
     token = token ? token : '';
-    return this.http.delete(this.url + '/' + veiculo, {
+    return this.http.delete(this.url + '/' + id, {
       headers: new HttpHeaders({
-        'Authorization': token
+        'Authorization': token, 'Access-Control-Allow-Origin': '*',
       })
     })
       .pipe(map((resposta) => <VeiculoModel>resposta));

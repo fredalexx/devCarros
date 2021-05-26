@@ -2,7 +2,7 @@
   <!--FORMULÁRIO DE CADASTRO-->
   <div class="container-fluid">
     <div class="row justify-content-md-center">
-      <form class="col col-lg-6 login-form" [formGroup]="form" (ngSubmit)="adicionar()">
+      <form class="col col-lg-6 login-form" [formGroup]="form" (ngSubmit)="salvar()">
         <h1>Cadastro</h1>
         <div class="form-floating mb-3">
           <input type="text" formControlName="nome" placeholder="NOME" />

@@ -25,6 +25,6 @@ export class ClienteService {
           'Authorization': token
         })
       })
-      .pipe(map(resposta => <ClienteModel>resposta));
+      .pipe(map((resposta) => <ClienteModel>resposta));
   }
 }
