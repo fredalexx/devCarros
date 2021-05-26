@@ -21,7 +21,8 @@ export class CadastroVeiculoComponent implements OnInit {
   constructor(
     private service: VeiculoService,
     private confirmarService: ConfirmationService,
-    private messageService: MessageService) { }
+    private messageService: MessageService
+  ) {}
 
   ngOnInit(): void {
     this.loading = true;
@@ -55,11 +56,12 @@ export class CadastroVeiculoComponent implements OnInit {
     });
   }
 
-  excluir(id: VeiculoDTO) {
-    alert("funci")
+
+  excluir(id: number) {
     this.service.excluir(id).subscribe((resposta) => {
       this.consultar();
       this.veiculo = {};
     });
+    alert('funci');
   }
 }
