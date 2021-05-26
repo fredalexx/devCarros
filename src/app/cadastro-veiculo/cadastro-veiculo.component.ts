@@ -22,7 +22,7 @@ export class CadastroVeiculoComponent implements OnInit {
     private service: VeiculoService,
     private confirmarService: ConfirmationService,
     private messageService: MessageService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loading = true;
@@ -48,7 +48,17 @@ export class CadastroVeiculoComponent implements OnInit {
     this.operacao = false;
   }
 
-  atualizar() {
+  atualizar(dado: VeiculoModel) {
+    this.editar(dado);
+    /*
+    this.service.atualizar(this.veiculo).subscribe(() => {
+      this.veiculo = {};
+      this.operacao = true;
+      this.consultar();
+    });*/
+  }
+
+  salvarAlteracao() {
     this.service.atualizar(this.veiculo).subscribe(() => {
       this.veiculo = {};
       this.operacao = true;
