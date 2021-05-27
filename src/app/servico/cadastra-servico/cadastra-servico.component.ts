@@ -37,13 +37,18 @@ export class CadastraServicoComponent implements OnInit {
     this.consultar();
   }
 
-  excluir() {
-    this.servico.idVeiculo = this.idVeiculo;
-    this.service.excluir(this.servico).subscribe((resposta) => {
-      console.log(resposta);
-      this.hideDialog();
+  editar(dado: ServicoModel) {
+    this.servico = this.mapper.converterModelParaDTO(dado);
+    this.operacao = false;
+  }
+
+
+  excluir(id: number) {
+    this.service.excluir(id).subscribe((resposta) => {
       this.consultar();
+      this.servico = {};
     });
+    alert('Esse serviço será excluido da Base de dados!');
   }
 
   consultar() {
@@ -63,6 +68,19 @@ export class CadastraServicoComponent implements OnInit {
       this.consultar();
     });
   }
+
+  atualizar(dado: ServicoModel) {
+    this.editar(dado);
+  }
+
+  salvarAlteracao() {
+    this.service.atualizar(this.servico).subscribe(() => {
+      this.servico = {};
+      this.operacao = true;
+      this.consultar();
+    });
+  }
+
 
   salvarItem() {
     this.servico.item = this.servico.item;
