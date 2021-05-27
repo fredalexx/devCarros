@@ -38,17 +38,30 @@ export class ServicoService {
       .pipe(map((resposta) => <ServicoModel>resposta));
   }
 
-  excluir(servico: ServicoDTO): Observable<ServicoModel> {
+
+  excluir(id: number): Observable<ServicoModel> {
     let token = localStorage.getItem('token');
     token = token ? token : '';
     return this.http
-      .delete(this.url, {
+      .delete(this.url + '/' + id, {
         headers: new HttpHeaders({
-          'Authorization': token
-        })
+          Authorization: token,
+        }),
       })
       .pipe(map((resposta) => <ServicoModel>resposta));
   }
+  /*
+    excluir(servico: ServicoDTO): Observable<ServicoModel> {
+      let token = localStorage.getItem('token');
+      token = token ? token : '';
+      return this.http
+        .delete(this.url, {
+          headers: new HttpHeaders({
+            'Authorization': token
+          })
+        })
+        .pipe(map((resposta) => <ServicoModel>resposta));
+    }*/
 
   atualizar(servico: ServicoDTO) {
     let token = localStorage.getItem('token');

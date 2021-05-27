@@ -71,6 +71,6 @@ export class CadastroVeiculoComponent implements OnInit {
       this.consultar();
       this.veiculo = {};
     });
-    alert('funci');
+    alert('Esse veículo será excluido da Base de Dados');
   }
 }
