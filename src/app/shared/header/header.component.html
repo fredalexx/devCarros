@@ -1,16 +1,16 @@
 <title>DEVCARROS</title>
 
-<mat-toolbar>
-  <mat-toolbar-row style="font-size: 1.2rem; height: 70px">
+<mat-toolbar color="primary">
+  <mat-toolbar-row style="font-size: 1.2rem; height: 80px">
     <span (click)="home()"><b>Gerenciador Automotivo</b></span>
     <span class="example-spacer" routerLink=""></span>
     <button mat-button [matMenuTriggerFor]="beforeMenu">
       <b>ESCOLHA UMA FUNCIONALIDADE</b>
     </button>
     <mat-menu #beforeMenu="matMenu" xPosition="before">
-      <button mat-menu-item (click)="veiculo()">Cadastrar Veículo</button>
-      <button mat-menu-item (click)="servico()">Cadastar Serviço</button>
-      <button mat-menu-item routerLink=" ">Sair</button>
+      <button mat-menu-item (click)="veiculo()"><b>Cadastrar Veículo</b></button>
+      <button mat-menu-item><b>Cadastar Serviço</b></button>
+      <button mat-menu-item (click)="login()"><b>Sair</b></button>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

@@ -4,22 +4,22 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   veiculo() {
     this.router.navigateByUrl('/veiculo');
   }
 
-  servico() {
-    this.router.navigateByUrl('/servicos/cadastro');
-  }
-
   home() {
     this.router.navigateByUrl('/home');
+  }
+
+  login() {
+    this.router.navigateByUrl('/login');
   }
 }
