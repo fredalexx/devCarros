@@ -169,7 +169,7 @@ input[type="submit"]:hover {
   background: #f7f7f7;
   border: 1px solid rgba(147, 184, 189, 0.8);
 
-  -webkit-box-shadow: 10px;
+
   border-radius: 10px;
 
   -webkit-animation-duration: 0.5s;
