@@ -1,3 +1,4 @@
+import { HomeModule } from './home/home.module';
 import { ServicoComponent } from './servico/servico.component';
 import { LoginComponent } from './autenticacao/login/login.component';
 import { PrincipalComponent } from './home/principal/principal.component';
